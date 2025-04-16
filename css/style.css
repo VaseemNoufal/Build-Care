@@ -766,7 +766,7 @@ h1{
         height: 95px;
     }
     .text-reveal h1{
-        font-size: 3em;
+        font-size: 3.1em;
     }
 }
 @media all and (max-width: 732px){
@@ -793,14 +793,11 @@ h1{
         right: 6%;
     }
     .text-reveal h1{
-        font-size: 2.9em;
+        font-size: 3em;
+        max-width: 85%;
     }
     #home header{
         height: 90px;
-    }
-    .text-reveal h1{
-        max-width: 85%;
-        /* mind this */
     }
 }
 @media all and (max-width:670px){
@@ -813,7 +810,7 @@ h1{
         padding-top: 41%;
     }
     .text-reveal h1{
-        font-size: 3em;
+        font-size: 2.9em;
         max-width: 90%;
     }
     #home .spotlight .slider-ani .other::before{
@@ -852,7 +849,7 @@ h1{
         font-size: 17px;
     }
     .text-reveal h1{
-        font-size: 3.1em;
+        font-size: 3.2em;
     }
 }
 @media all and (max-width: 515px){
@@ -860,10 +857,13 @@ h1{
         padding-top: 49%;
     }
     .text-reveal h1{
-        font-size: 2.9em;
+        font-size: 3em;
     }
     .spotlight .buttons{
-        top: 70%;
+        top: 66%;
+    }
+    .spotlight .navigation-area{
+        bottom: 18%;
     }
 }
 @media all and (max-width:500px){
@@ -879,7 +879,7 @@ h1{
         padding-top: 50%;
     }
     .text-reveal h1{
-        font-size: 2.8em;
+        font-size: 2.9em;
         max-width: 98%;
     }
 }
@@ -950,7 +950,7 @@ h1{
         left: 26%;
     }
     .text-reveal h1{
-        font-size: 2.8em;
+        font-size: 2.9em;
     }
     #home .spotlight .slider-ani .class-dsimg{
         top: 390px;
@@ -961,7 +961,7 @@ h1{
         padding-top: 57%;
     }
     .text-reveal h1{
-        font-size: 2.7em;
+        font-size: 2.8em;
     }
     #home .spotlight .slider-ani .other::before{
         right: 28%;
@@ -969,7 +969,7 @@ h1{
 }
 @media all and (max-width: 380px){
     .text-reveal h1{
-        font-size: 2.6em;
+        font-size: 2.7em;
     }
     .spotlight .navigation-area ul li{
         font-size: 17px;
@@ -994,7 +994,7 @@ h1{
         padding-top: 61%;
     }
     .text-reveal h1{
-        font-size: 2.4em;
+        font-size: 2.5em;
     }
 }
         
