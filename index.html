@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Build Care | Construction Company</title>
+    <link rel="shortcut icon" href="images/Build Care Background Removed Final.png" type="image/x-icon">
+</head>
+<body>
+  <section id="home">
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+    
+    <!-- Your website content -->
+    <div id="content" style="display: none;">
+      <!-- rest of the site -->
+    </div>
+      <header>
+          <div class="left">
+              <h1 class="lefthe">
+                  <a href="#">
+                      <img src="images/bidcare.png" alt="Logo" id="logono">
+                  </a>
+              </h1>
+              <nav>
+                  <ul>
+                      <li>
+                          <a href="#" class="special">Home</a>
+                      </li>
+                      <li>
+                          <a href="#" class="special">Sectors</a>
+                          <img src="images/chevron-down-solid.svg" alt="icon" class="chevron">
+                      </li>
+                      <li>
+                          <a href="#" class="special">About</a>
+                      </li>
+                      <li>
+                          <a href="#" class="special">Contact</a>
+                      </li>
+                      <li>
+                          <a href="#" class="special">Hire</a>
+                      </li>
+                      <li>
+                          <a href="#" class="special">Home</a>
+                      </li>
+                      <li>
+                          <a href="#" class="special">Home</a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+          <div class="right">
+              <img src="images/globe-solid.svg" alt="icon" class="globe">
+              <span class="language special">English (India)</span>
+              <img src="images/chevron-down-solid.svg" alt="icon" class="chevron" id="sub">
+              <img src="images/bars-solid.svg" alt="barsimaeg" class="barsimaeg">
+              <div class="drop-language" id="drop-lan-heaad">
+                  <span class="language"><a href="#">Malayalam (India)</a></span>
+              </div>
+          </div>
+      </header>
+      <section class="spotlight">
+         <section class="navigation-area">
+          <ul>
+            <li><a href="#">Ch Centre</a></li>
+            <li><a href="#">Mundayad</a></li>
+            <li><a href="#">Construction</a></li>
+          </ul>
+         </section>
+          <section class="buttons" id="toggleSlider">
+              <img src="images/arrow-right-solid.svg" alt="image" />
+          </section>
+ 
+                  
+          <section class="slider-ani one active">
+              <div class="class-dsimg">
+                  <img src="images/fco5.png" alt="">
+              </div>
+              <div class="overlay"></div>
+              <section class="backgroun">
+                  <img src="images/construction-site-.jpg" alt="imge">
+              </section>
+              <div class="content">
+                  <div class="span-con">
+                      <span class="role">MY ROLE</span>
+                  </div>
+                  <div class="text-reveal">
+                      <h1>This is CH Centre Edaynnur</h1>
+                  </div>
+                  <div class="other">
+                      <span class="readmre"><a href="#">Read More</a></span>
+                  </div>
+              </div>
+          </section>
+
+
+          <section class="slider-ani two">
+              <div class="class-dsimg">
+                  <img src="images/fco3.png" alt="">
+              </div>
+              <div class="overlay"></div>
+              <section class="backgroun">
+                  <img src="images/image.png" alt="imge">
+              </section>
+              <div class="content">
+                  <div class="span-con">
+                      <span class="role">MY ROLE</span>
+                  </div>
+                  <div class="text-reveal">
+                      <h1>Hello World This Company is by Noufal.</h1>
+                  </div>
+                  <div class="other">
+                      <span class="readmre"><a href="#">Read More</a></span>
+                  </div>
+              </div>
+          </section>
+
+          <section class="slider-ani three">
+              <div class="class-dsimg">
+                  <img src="images/fco4.png" alt="">
+              </div>
+              <!-- <div style="width: 300px;height: 300px;background: #69deff;opacity: .8;display: block; position: absolute;top: 0; bottom: 0; left: 0; right:0;margin: auto;"></div> -->
+              <div class="overlay"></div>
+              <section class="backgroun">
+                  <video autoplay muted class="video">
+                      <source src="images/WhatsApp Video 2025-04-14 at 19.03.32_9a27de2e.mp4">
+                  </video>
+              </section>
+              <div class="content">
+                  <div class="span-con">
+                      <span class="role">MY ROLE</span>
+                  </div>
+                  <div class="text-reveal">
+                      <h1>Seeta Poyil Masjid <span style="color: #148eb0;">Build Care</span></h1>
+                  </div>
+                  <div class="other">
+                      <span class="readmre"><a href="#">Read More</a></span>
+                  </div>
+              </div>
+          </section>`
+      </section>
+  </section>
+  <section id="habbbi" style="height: 2000px; background-color: #cecece;">
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+
+  </section>
+  <!-- Script Section -->
+  <script>
+      const toggleBtn = document.getElementById('toggleSlider');
+      const sliders = document.querySelectorAll('.slider-ani');
+      const totalSlides = sliders.length;
+      let currentSlide = 0;
+      let autoSlideTimer = null;
+    
+      function showSlide(index) {
+        sliders.forEach((slider, i) => {
+          slider.style.display = i === index ? 'block' : 'none';
+        });
+      }
+    
+      function startAutoSlide() {
+        clearTimeout(autoSlideTimer);
+    
+        const current = sliders[currentSlide];
+        const video = current.querySelector('video');
+    
+        if (video) {
+          video.currentTime = 0;
+          video.play();
+    
+          video.onended = () => {
+            goToNextSlide();
+          };
+        } else {
+          autoSlideTimer = setTimeout(() => {
+            goToNextSlide();
+          }, 5000);
+        }
+      }
+    
+      function goToNextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+        startAutoSlide();
+      }
+    
+      toggleBtn.addEventListener('click', () => {
+        goToNextSlide();
+      });
+    
+      showSlide(currentSlide);
+      startAutoSlide();
+    </script>
+    
+    <script>
+      const header = document.querySelector('header');
+      const homeSection = document.getElementById('home');
+      const hoese = document.querySelectorAll('.special');
+      const logomain = document.getElementById('logono');
+      const chevrons = document.querySelectorAll('.chevron');
+      const globe = document.querySelector('.globe');
+      let isInHome = true;
+  
+      function applyLightMode() {
+        header.style.backgroundColor = "white";
+        hoese.forEach(link => link.style.color = "#0b566b");
+        logomain.style.filter = "none";
+        chevrons.forEach(c => {
+          c.style.filter = "brightness(0) saturate(100%) invert(23%) sepia(100%) saturate(715%) hue-rotate(148deg) brightness(92%) contrast(89%)";
+        });
+        globe.style.filter = "brightness(0) saturate(100%) invert(23%) sepia(100%) saturate(715%) hue-rotate(148deg) brightness(92%) contrast(89%)";
+      }
+  
+      function applyDarkMode() {
+        header.style.backgroundColor = "transparent";
+        hoese.forEach(link => link.style.color = "white");
+        logomain.style.filter = "brightness(100) saturate(0) invert(0)";
+        chevrons.forEach(c => {
+          c.style.filter = "invert(1)";
+        });
+        globe.style.filter = "invert(1)";
+      }
+  
+      function setHoverListeners() {
+        header.onmouseenter = () => applyLightMode();
+        header.onmouseleave = () => applyDarkMode();
+      }
+  
+      function removeHoverListeners() {
+        header.onmouseenter = null;
+        header.onmouseleave = null;
+      }
+      function applyResponsiveHeader() {
+        const width = window.innerWidth;
+        const homeBottom = homeSection.getBoundingClientRect().bottom;
+
+        if (width <= 757) {
+          // Mobile behavior: always light header with no hover
+          applyLightMode();
+          header.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.4)";
+          removeHoverListeners();
+          isInHome = false;
+        } else {
+          if (homeBottom > 0) {
+            // In the home section
+            if (!isInHome) {
+              isInHome = true;
+            }
+            applyDarkMode();
+            header.style.boxShadow = "none";
+            setHoverListeners();
+          } else {
+            // Outside the home section
+            if (isInHome) {
+              isInHome = false;
+            }
+            applyLightMode();
+            header.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.4)";
+            removeHoverListeners();
+          }
+        }
+      }
+
+// Apply on load, scroll and resize
+window.addEventListener("load", applyResponsiveHeader);
+window.addEventListener("scroll", applyResponsiveHeader);
+window.addEventListener("resize", applyResponsiveHeader);
+
+
+    </script>
+    <!-- Dropmenu Script Section -->
+    <script>
+      const vidch = document.getElementById('sub');
+      const lauguagee = document.getElementById('drop-lan-heaad');
+      let isOpen = false;
+    
+      vidch.addEventListener("click", () => {
+        isOpen = !isOpen;
+    
+        lauguagee.style.display = isOpen ? "flex" : "none";
+        vidch.style.transform = isOpen ? "rotate(180deg)" : "rotate(0deg)";
+      });
+    </script>
+</body>
+</html>
