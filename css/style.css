@@ -460,7 +460,7 @@ h1{
     content: "";
     position: absolute;
     display: block;
-    width: 0%;
+    width: 20%;
     height: 2px;
     background: #69deff;
     top: -5px;
@@ -704,7 +704,7 @@ h1{
         }
     }
     .spotlight .navigation-area{
-        bottom: 21%;
+        bottom: 14%;
     }
 }
 @media all and (max-width: 850px){
@@ -757,7 +757,7 @@ h1{
         margin-left: 3%;
     }
     .spotlight .navigation-area{
-        left: 4%;
+        left: 7%;
     }
     #home .spotlight .slider-ani .class-dsimg{
         top: 110px;
@@ -766,12 +766,12 @@ h1{
         height: 95px;
     }
     .text-reveal h1{
-        font-size: 2.7em;
+        font-size: 3em;
     }
 }
 @media all and (max-width: 732px){
     #home .spotlight .slider-ani{
-        padding-top: 28%;
+        padding-top: 29%;
     }
     #home .spotlight .slider-ani .other::before{
         left: 15%;
@@ -779,24 +779,28 @@ h1{
 }
 @media all and (max-width: 700px){
     #home .spotlight .slider-ani{
-        padding-top: 30%;
+        padding-top: 33%;
+    }
+    .spotlight .navigation-area{
+        bottom: 14%;
     }
 }
 @media all and (max-width: 670px){
     #home .spotlight .slider-ani{
-        padding-top: 32%;
+        padding-top: 37%;
     }
     .spotlight .buttons{
         right: 6%;
     }
     .text-reveal h1{
-        font-size: 2.6em;
+        font-size: 2.9em;
     }
     #home header{
         height: 90px;
     }
     .text-reveal h1{
-        max-width: 75%;
+        max-width: 85%;
+        /* mind this */
     }
 }
 @media all and (max-width:670px){
@@ -806,11 +810,11 @@ h1{
 }
 @media all and (max-width: 605px){
     #home .spotlight .slider-ani{
-        padding-top: 34%;
+        padding-top: 41%;
     }
     .text-reveal h1{
-        font-size: 2.7em;
-        max-width: 80%;
+        font-size: 3em;
+        max-width: 90%;
     }
     #home .spotlight .slider-ani .other::before{
         left: 17%;
@@ -836,13 +840,10 @@ h1{
         display: none;
     }
     #home .spotlight .slider-ani {
-        padding-top: 36%;
+        padding-top: 45%;
     }
     #home .spotlight .slider-ani .other::before {
         left: 20%;
-    }
-    #home .spotlight div.content .role{
-        font-size: 16px;
     }
     #home .spotlight div.content .span-con{
         margin-left: 9px;
@@ -851,21 +852,18 @@ h1{
         font-size: 17px;
     }
     .text-reveal h1{
-        font-size: 2.8em;
+        font-size: 3.1em;
     }
 }
 @media all and (max-width: 515px){
     #home .spotlight .slider-ani {
-        padding-top: 38%;
+        padding-top: 49%;
     }
     .text-reveal h1{
-        font-size: 2.6em;
+        font-size: 2.9em;
     }
-    #home .spotlight div.content .span-con{
-        margin-bottom: 20px;
-    }
-    #home .spotlight .slider-ani .other{
-        margin-top: 20px;
+    .spotlight .buttons{
+        top: 70%;
     }
 }
 @media all and (max-width:500px){
@@ -878,16 +876,16 @@ h1{
 }
 @media all and (max-width: 470px){
     #home .spotlight .slider-ani {
-        padding-top: 40%;
+        padding-top: 50%;
     }
     .text-reveal h1{
-        font-size: 2.5em;
-        max-width: 90%;
+        font-size: 2.8em;
+        max-width: 98%;
     }
 }
 @media all and (max-width: 436px){
     #home .spotlight .slider-ani {
-        padding-top: 42%;
+        padding-top: 53%;
     }
     #home header{
         height: 85px;
@@ -952,7 +950,7 @@ h1{
         left: 26%;
     }
     .text-reveal h1{
-        font-size: 2.5em;
+        font-size: 2.8em;
     }
     #home .spotlight .slider-ani .class-dsimg{
         top: 390px;
@@ -960,10 +958,10 @@ h1{
 }
 @media all and (max-width: 390px){
     #home .spotlight .slider-ani{
-        padding-top: 49%;
+        padding-top: 57%;
     }
     .text-reveal h1{
-        font-size: 2.4em;
+        font-size: 2.7em;
     }
     #home .spotlight .slider-ani .other::before{
         right: 28%;
@@ -971,10 +969,7 @@ h1{
 }
 @media all and (max-width: 380px){
     .text-reveal h1{
-        font-size: 2.3em;
-    }
-    .spotlight .buttons{
-        top: 83%;
+        font-size: 2.6em;
     }
     .spotlight .navigation-area ul li{
         font-size: 17px;
@@ -989,12 +984,17 @@ h1{
         margin-right: 15px;
     }
 }
+@media all and (max-width: 340px){
+    #home .spotlight .slider-ani{
+        padding-top: 59%;
+    }
+}
 @media all and (max-width: 360px){
     #home .spotlight .slider-ani{
-        padding-top: 53%;
+        padding-top: 61%;
     }
     .text-reveal h1{
-        font-size: 2.1em;
+        font-size: 2.4em;
     }
 }
         
