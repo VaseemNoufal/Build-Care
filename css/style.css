@@ -561,6 +561,7 @@ h1{
 #whoweare{
     padding: 100px 0;
     position: relative;
+    overflow: hidden;
 }
 #whoweare::before{
     content: "";
@@ -1132,7 +1133,7 @@ h1{
 }
 @media all and (max-width: 425px){
     #whoweare section.wrapper div.left h1.main-ab{
-        font-size: 36px;
+        font-size: 39px;
     }
     #whoweare section.wrapper div.left .p-ab{
         font-size: 16px;
@@ -1190,7 +1191,7 @@ h1{
         margin-right: 15px;
     }
     #whoweare section.wrapper div.left h1.main-ab{
-        font-size: 36px;
+        font-size: 40px;
     }
     #whoweare section.wrapper div.left .p-ab{
         font-size: 15.7px;
