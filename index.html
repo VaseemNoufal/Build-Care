@@ -121,7 +121,6 @@
               <div class="class-dsimg">
                   <img src="images/fco4.png" alt="">
               </div>
-              <!-- <div style="width: 300px;height: 300px;background: #69deff;opacity: .8;display: block; position: absolute;top: 0; bottom: 0; left: 0; right:0;margin: auto;"></div> -->
               <div class="overlay"></div>
               <section class="backgroun">
                   <video autoplay muted playsinline preload="auto" class="video">
@@ -142,21 +141,36 @@
           </section>`
       </section>
   </section>
-  <section id="habbbi" style="height: 2000px; background-color: #cecece;">
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-
+  <!-- Who We are Section -->
+  <section id="whoweare">
+    <section class="wrapper">
+      <div class="left slide-ani">
+        <section class="backgrounud-text">
+          <h1>ABOUT US</h1>
+        </section>
+        <span class="label-ab hidden">Who We are</span>
+        <h1 class="main-ab hidden hidden">Precision Today, Strength Tomorrow</h1>
+        <p class="p-ab hidden">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, repudiandae optio? Cum sapiente earum consequuntur maiores quos inventore minima non laboriosam! Exercitationem perspiciatis.
+        </p>
+        <p class="p-ab hidden">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, repudiandae optio? Cum sapiente earum consequuntur maiores quos inventore minima non laboriosam! Exercitationem perspiciatis.
+        </p>
+        <a href="#" class="about-ab hidden">About us</a>
+      </div>
+      <div class="right hiddentwo">
+        <div class="projects one">
+          <h1 class="counter" data-target="50">0+</h1>
+          <span class="num">Projects</span>
+        </div>
+        <div class="projects two">
+          <h1 class="counter" data-target="60">0+</h1>
+          <span class="num">Satisfied Clients</span>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section id="blah" style="height: 1000px; display: flex;
+  align-items: center;justify-content: center;">
+    <h1 class="hidden" style="font-size: 50px;">hlo</h1>
   </section>
   <!-- Script Section -->
   <script>
@@ -295,5 +309,71 @@ window.addEventListener("resize", applyResponsiveHeader);
         vidch.style.transform = isOpen ? "rotate(180deg)" : "rotate(0deg)";
       });
     </script>
+    <!-- Counter + Animation -->
+    <script>
+      // Counter Observer
+      const counters = document.querySelectorAll('.counter');
+    
+      const counterObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = +counter.getAttribute('data-target');
+            let count = 0;
+    
+            const updateCounter = () => {
+              const increment = target / 140;
+    
+              if (count < target) {
+                count += increment;
+                counter.textContent = Math.ceil(count) + "+";
+                requestAnimationFrame(updateCounter);
+              } else {
+                counter.textContent = target + "+";
+              }
+            };
+    
+            updateCounter();
+            counterObserver.unobserve(counter); // use correct observer
+          }
+        });
+      }, {
+        threshold: 0.4
+      });
+    
+      counters.forEach(counter => {
+        counterObserver.observe(counter);
+      });
+    </script>
+    
+    <!-- Animation -->
+     <script>
+      const observer = new IntersectionObserver((entries) =>{
+        entries.forEach((entry) =>{
+          console.log(entry)
+          if (entry.isIntersecting){
+            entry.target.classList.add('show')
+          } else{
+            entry.target.classList.remove('show')
+          }
+        })
+      })
+      const hiddenElements = document.querySelectorAll('.hidden');
+      hiddenElements.forEach((el) => observer.observe(el));
+     </script>
+     <script>
+      const observertwo = new IntersectionObserver((entries) =>{
+        entries.forEach((entry) =>{
+          console.log(entry)
+          if (entry.isIntersecting){
+            entry.target.classList.add('showtwo')
+          } else{
+            entry.target.classList.remove('showtwo')
+          }
+        })
+      })
+      const hiddenElementstwo = document.querySelectorAll('.hiddentwo');
+      hiddenElementstwo.forEach((el) => observertwo.observe(el));
+     </script>
 </body>
 </html>
