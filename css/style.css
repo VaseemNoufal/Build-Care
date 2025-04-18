@@ -92,6 +92,7 @@ del {
 :root{
     --blue-colors: #0b566b;
     --grey-color: #525252;
+    --txt-color: #147b97;
 }
 
 
@@ -738,6 +739,146 @@ h1{
     transform: translateX(0);
     filter: blur(0);
 }
+/* What we do Section */
+#whatwedo{
+    padding: 20px 0 80px;
+    overflow: hidden;
+    position: relative;
+}
+#whatwedo section.wrapper::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #fff 100%);
+    pointer-events: none;
+}
+#whatwedo::after{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('../images/buildingbcare.png');
+    background-repeat: no-repeat;
+    background-position: right -130px top 5px;
+    background-size: 25%;
+    opacity: .3; 
+    z-index: -1;
+    display: block;
+}
+#whatwedo::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('../images/white.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .5; 
+    z-index: -1;
+    display: block;
+}
+#whatwedo section.top{
+    margin-bottom: 50px;
+}
+#whatwedo section.top .background-text h1{
+    font-size: 165px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px var(--blue-colors);
+    font-family: Arial;
+}
+#whatwedo section.top .background-text{
+    position: absolute;
+    top: -55px;
+    opacity: .08;
+    left: -3px;
+}
+#whatwedo section.top .label{
+    font-size: 1.1em;
+    text-transform: uppercase;
+    color: #7c7c7c;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+#whatwedo section.top h1{
+    font-size: 53px;
+    font-family: 'barlowbold';
+    color: #147b97;
+    margin-bottom: 43px;
+    max-width: 90%;
+}
+#whatwedo section.top .clicker{
+    display: flex;
+    align-items: center;
+}
+#whatwedo section.top .clicker li{
+    margin-right: 25px;
+    font-size: 20px;
+    color: #707070;
+    position: relative;
+    font-family: 'barlowbold';
+    cursor: pointer;
+}
+#whatwedo section.top .clicker li::before{
+    content: "";
+    display: block;
+    width: 0%;
+    position: absolute;
+    height: 2.5px;
+    background: var(--blue-color);
+    bottom: -8px;
+    transition: all .5s ease;
+}
+#whatwedo section.top .clicker li.active::before{
+    width: 100%;
+}
+#whatwedo section.bottom .slider-img{
+    display: none;
+    justify-content: space-between;
+    width: 90%;
+}
+#whatwedo section.bottom .slider-img div.left{
+    width: 55%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+#whatwedo section.bottom .slider-img div.left img{
+    width: 130%;
+}
+#whatwedo section.bottom .slider-img div.right{
+    width: 35%;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+#whatwedo section.bottom .slider-img div.right h1{
+    font-size: 51px;
+    color: var(--txt-color);
+    font-family: 'barlowbold';
+    margin-bottom: 20px;
+}
+#whatwedo section.bottom .slider-img div.right p{
+    font-size: 18px;
+    color: var(--grey-color);
+}
+#whatwedo section.bottom .slider-img.activeslider{
+    display: flex;
+    animation: zoomIn 1s ease forwards;
+}
+@keyframes zoomIn {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+      filter: blur(5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0);
+    }
+  }
 /* Make header layout responsive */
 @media (max-width: 1125px){
     #home header nav ul{
@@ -989,6 +1130,15 @@ h1{
     #home header{
         height: 90px;
     }
+    #whatwedo section.bottom .slider-img.activeslider{
+        flex-wrap: wrap;
+    }
+    #whatwedo section.bottom .slider-img div.left{
+        width: 100%;
+    }
+    #whatwedo section.bottom .slider-img div.right{
+        width: 100%;
+    }
 }
 @media all and (max-width:670px){
     #home .spotlight .slider-ani .other::before{
@@ -1100,6 +1250,9 @@ h1{
     }
     #whoweare section.wrapper div.left .p-ab{
         font-size: 17px;
+    }
+    #whatwedo section.bottom .slider-img div.right h1{
+        font-size: 45px;
     }
 }
 @media all and (max-width: 450px){

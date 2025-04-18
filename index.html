@@ -54,7 +54,7 @@
               </div>
           </div>
           <div class="dropdownhead">
-            
+
           </div>
       </header>
       <section class="spotlight">
@@ -134,13 +134,13 @@
                       <span class="readmre"><a href="#">Read More</a></span>
                   </div>
               </div>
-          </section>`
+          </section>
       </section>
       <div class="custom-shape-divider-bottom-1744956366">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
         </svg>
-    </div>
+      </div>
     </div>
   </section>
   <!-- Who We are Section -->
@@ -170,31 +170,60 @@
       </div>
     </section>
   </section>
-<section id="whatwedo" style="overflow: hidden;">
+<section id="whatwedo">
   <section class="wrapper">
     <section class="top">
-      <div class="background-text" style="display: none;">
-        <h1>ABOUT US</h1>
+      <div class="background-text">
+        <h1>SERVICES</h1>
       </div>
-      <span class="label">WHAT WE DO</span>
-      <h1>We have a vision for the future of construction.</h1>
-      <ul class="clicker" id="clickerd">
-        <li>Design</li>
+      <span class="label hidden">WHAT WE DO</span>
+      <h1 class="hiddentwo">We have a vision for the future of construction.</h1>
+      <ul class="clicker hidden" id="clickerd">
+        <li class="active">Design</li>
         <li>Aproval</li>
         <li>Construction</li>
+        <li>Hlo</li>
       </ul>
     </section>
   </section>
-  <section class="bottom">
-    <div class="slider-img one">
+  <section class="bottom hiddentwo">
+    <div class="slider-img activeslider">
       <div class="left">
-        <img src="images/construction-site-.jpg" alt="">
+        <img src="images/construction-site-.jpg" alt="" width="600px">
       </div>
       <div class="right">
         <h1>Stunning structures, sustainably built</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, qui laboriosam maiores earum sed impedit in iusto totam dolorem quia eaque quibusdam adipisci ut animi temporibus placeat! Molestias, cumque vitae.</p>
       </div>
     </div>
+
+    <div class="slider-img">
+      <div class="left">
+        <img src="images/construction-site-.jpg" alt=""  width="600px">
+      </div>
+      <div class="right">
+        <h1>Stunning structures, sustainably built</h1>
+        <p>third dolor sit amet consectetur adipisicing elit. Rerum, qui laboriosam maiores earum sed impedit in iusto totam dolorem quia eaque quibusdam adipisci ut animi temporibus placeat! Molestias, cumque vitae.</p>
+      </div>
+    </div>
+
+    <div class="slider-img">
+      <div class="left">
+        <img src="images/image.png" alt=""  width="600px">
+      </div>
+      <div class="right">
+        <h1>Stunning structures, sustainably built</h1>
+        <p>second dolor sit amet consectetur adipisicing elit. Rerum, qui laboriosam maiores earum sed impedit in iusto totam dolorem quia eaque quibusdam adipisci ut animi temporibus placeat! Molestias, cumque vitae.</p>
+      </div>
+    </div>
+    <div class="slider-img">
+      <div class="left">
+        <img src="images/image.png" alt=""  width="600px">
+      </div>
+      <div class="right">
+        <h1>Stunning structures, sustainably built</h1>
+        <p>five dolor sit amet consectetur adipisicing elit. Rerum, qui laboriosam maiores earum sed impedit in iusto totam dolorem quia eaque quibusdam adipisci ut animi temporibus placeat! Molestias, cumque vitae.</p>
+      </div>
   </section>
 </section>
 
@@ -401,6 +430,27 @@ window.addEventListener("resize", applyResponsiveHeader);
       })
       const hiddenElementstwo = document.querySelectorAll('.hiddentwo');
       hiddenElementstwo.forEach((el) => observertwo.observe(el));
+     </script>
+     <script>
+        const tabs = document.querySelectorAll("#clickerd li");
+        const hlo = document.querySelectorAll(".slider-img");
+
+        tabs.forEach((tab, index) => {
+          tab.addEventListener("click", () => {
+            // Remove 'active' from all li
+            tabs.forEach(t => t.classList.remove("active"));
+
+            // Remove 'activeslider' from all divs
+            hlo.forEach(item => item.classList.remove("activeslider"));
+
+            // Add 'active' to clicked li
+            tab.classList.add("active");
+
+            // Add 'activeslider' to matching div
+            hlo[index].classList.add("activeslider");
+          });
+        });
+
      </script>
 </body>
 </html>
