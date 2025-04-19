@@ -226,6 +226,124 @@
       </div>
   </section>
 </section>
+<section id="projects">
+  <section class="top">
+    <section class="background-text">
+      <h1>PROJECTS</h1>
+    </section>
+    <section class="line">
+      <div class="content-txt">
+        <span class="label">FEATURED</span>
+        <h1>PROJECTS</h1>
+      </div>
+      <div class="view">
+        <span class="viewtxt" style="text-transform: uppercase;">View all Projects</span>
+      </div>
+    </section>
+  </section>
+  <section class="bottom">
+    <div class="buttons-nav nonparent">
+      <div class="nonleft" id="leftnb">
+        <img src="images/chevron-down-solid.svg" alt="icon">
+      </div>
+      <div class="nonright" id="rightnb">
+        <img src="images/chevron-down-solid.svg" alt="icon">
+      </div>
+    </div>
+    <ul class="corousel">
+      <li class="card">
+        <div class="img-container">
+          <img src="images/construction-site-.jpg" alt="Project-Image" width="250px" />
+        </div>
+        <div class="hoverlay">
+          <div class="gradient"></div>
+          <div class="content">
+            <span class="name">Chakkarakkal</span>
+            <h1>Rifaee Masjid</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim non necessitatibus cum officiis ipsa veritatis! .</p> 
+            <img src="images/chevron-down-solid.svg" alt="Chevron-image" width="25px">
+          </div>
+        </div>
+      </li>
+
+      <li class="card">
+        <div class="img-container">
+          <img src="images/image.png" alt="Project-Image" width="250px" />
+        </div>
+        <div class="hoverlay">
+          <div class="gradient"></div>
+          <div class="content">
+            <span class="name">Chakkarakkal</span>
+            <h1>hlo</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim non necessitatibus cum officiis ipsa veritatis! Ullam, pariaturt.</p> 
+            <img src="images/chevron-down-solid.svg" alt="Chevron-image" width="25px">
+          </div>
+        </div>
+      </li>
+
+      <li class="card">
+        <div class="img-container">
+          <img src="images/construction-site-.jpg" alt="Project-Image" width="250px" />
+        </div>
+        <div class="hoverlay">
+          <div class="gradient"></div>
+          <div class="content">
+            <span class="name">Chakkarakkal</span>
+            <h1>h</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim non necessitatibus cum officiis ipsa veritatis! Ullam, pariaturt.</p> 
+            <img src="images/chevron-down-solid.svg" alt="Chevron-image" width="25px">
+          </div>
+        </div>
+      </li>
+
+      <li class="card">
+        <div class="img-container">
+          <img src="images/construction-site-.jpg" alt="Project-Image" width="250px" />
+        </div>
+        <div class="hoverlay">
+          <div class="gradient"></div>
+          <div class="content">
+            <span class="name">Chakkarakkal</span>
+            <h1>muderi</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim non necessitatibus cum officiis ipsa veritatis! Ullam, pariaturt.</p> 
+            <img src="images/chevron-down-solid.svg" alt="Chevron-image" width="25px">
+          </div>
+        </div>
+      </li>
+
+      <li class="card">
+        <div class="img-container">
+          <img src="images/construction-site-.jpg" alt="Project-Image" width="250px" />
+        </div>
+        <div class="hoverlay">
+          <div class="gradient"></div>
+          <div class="content">
+            <span class="name">Chakkarakkal</span>
+            <h1>habbibbi</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim non necessitatibus cum officiis ipsa veritatis! Ullam, pariaturt.</p> 
+            <img src="images/chevron-down-solid.svg" alt="Chevron-image" width="25px">
+          </div>
+        </div>
+      </li>
+
+      <li class="card">
+        <div class="img-container">
+          <img src="images/construction-site-.jpg" alt="Project-Image" width="250px" />
+        </div>
+        <div class="hoverlay">
+          <div class="gradient"></div>
+          <div class="content">
+            <span class="name">Chakkarakkal</span>
+            <h1>laptop</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim non necessitatibus cum officiis ipsa veritatist.</p> 
+            <img src="images/chevron-down-solid.svg" alt="Chevron-image" width="25px">
+          </div>
+        </div>
+      </li>
+      
+    </ul>
+  </section>
+</section>
 
 
   <!-- Script Section -->
@@ -437,20 +555,101 @@ window.addEventListener("resize", applyResponsiveHeader);
 
         tabs.forEach((tab, index) => {
           tab.addEventListener("click", () => {
-            // Remove 'active' from all li
             tabs.forEach(t => t.classList.remove("active"));
 
-            // Remove 'activeslider' from all divs
             hlo.forEach(item => item.classList.remove("activeslider"));
 
-            // Add 'active' to clicked li
             tab.classList.add("active");
 
-            // Add 'activeslider' to matching div
             hlo[index].classList.add("activeslider");
           });
         });
 
      </script>
+        <script>
+          const carousel = document.querySelector('.corousel');
+          const arrowBtns = document.querySelectorAll('.nonparent div');
+          const firstCardWidth = carousel.querySelector('.card').offsetWidth;
+          let isDragging = false, startX, scrollStart;
+        
+          // 1. Duplicate cards for looping
+          const cards = [...carousel.children];
+          cards.slice(-4).forEach(card => {
+            const clone = card.cloneNode(true);
+            clone.classList.add("clone");
+            carousel.prepend(clone);
+          });
+          cards.slice(0, 4).forEach(card => {
+            const clone = card.cloneNode(true);
+            clone.classList.add("clone");
+            carousel.append(clone);
+          });
+        
+          // 2. Initial scroll to the real first card
+          carousel.scrollLeft = firstCardWidth * 4;
+        
+          // 3. Infinite Scroll Logic
+          carousel.addEventListener('scroll', () => {
+            const scrollLeft = carousel.scrollLeft;
+            const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        
+            if (scrollLeft <= 0) {
+              carousel.scrollLeft = scrollLeft + firstCardWidth * cards.length;
+            }
+            if (scrollLeft >= maxScroll) {
+              carousel.scrollLeft = scrollLeft - firstCardWidth * cards.length;
+            }
+          });
+        
+          // 4. Arrow button logic
+          arrowBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+              carousel.scrollLeft += btn.id === "leftnb" ? -firstCardWidth : firstCardWidth;
+            });
+          });
+        
+          // 5. Dragging logic
+          const draggingClass = "dragging";
+          carousel.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.pageX;
+            scrollStart = carousel.scrollLeft;
+            carousel.classList.add(draggingClass);
+          });
+        
+          document.addEventListener('mouseup', () => {
+            isDragging = false;
+            carousel.classList.remove(draggingClass);
+          });
+        
+          carousel.addEventListener('mouseleave', () => {
+            isDragging = false;
+            carousel.classList.remove(draggingClass);
+          });
+        
+          carousel.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const walk = e.pageX - startX;
+            carousel.scrollLeft = scrollStart - walk;
+          });
+        
+          // 6. Touch support for mobile
+          carousel.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].pageX;
+            scrollStart = carousel.scrollLeft;
+          });
+        
+          carousel.addEventListener('touchend', () => {
+            isDragging = false;
+          });
+        
+          carousel.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const walk = e.touches[0].pageX - startX;
+            carousel.scrollLeft = scrollStart - walk;
+          });
+        </script>
+        
 </body>
 </html>
