@@ -975,6 +975,7 @@ h1{
     gap: 10px;
     overflow: auto;
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
 }
 .corousel::-webkit-scrollbar {
     display: none; 
@@ -991,6 +992,7 @@ h1{
     height: 400px;
     overflow: hidden;
     position: relative;
+    scroll-snap-align: center;
 }
 #projects section.bottom ul.corousel li.card div.img-container{
     width: 100%;
@@ -1164,6 +1166,7 @@ h1{
     width: 95%;
     margin: 0 auto;
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
 }
 .corouseel::-webkit-scrollbar{
     display: none; 
@@ -1180,6 +1183,7 @@ h1{
     height: 270px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     margin-bottom: 40px;
+    scroll-snap-align: center;
 }
 #testimonila section.bottom ul.corouseel li.card::before{
     content: "";
@@ -1698,6 +1702,9 @@ h1{
     #whoweare section.wrapper div.left .p-ab{
         font-size: 18px;
     }
+    #testimonila section.bottom ul.corouseel{
+        grid-auto-columns: calc((97%) - 1px);
+    }
 }
 @media all and (max-width: 480px){
     #projects section.bottom ul.corousel{
@@ -1854,6 +1861,9 @@ h1{
     }
     #projects section.top section.line .content-txt span.label{
         font-size: 18px;
+    }
+    #testimonila section.bottom ul.corouseel li.card div.content p{
+        font-size: 16.5px;
     }
 }
 @media all and (max-width: 390px){
