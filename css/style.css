@@ -1130,7 +1130,7 @@ h1{
     left: 0;
     right: 0;
     bottom: 85px;
-    z-index: 999;
+    z-index: 900;
     display: flex;
     justify-content: space-between;
 
@@ -1226,6 +1226,78 @@ h1{
 #testimonila section.bottom ul.corouseel li.card div.po span.role{
     font-size: 15px;
     color: var(--grey-color);
+}
+/* Meet the Owner Section */
+#meettheowner{
+    padding: 80px 0;
+    position: relative;
+}
+#meettheowner section.top div.background-text{
+    position: absolute;
+    top: -5px;
+    opacity: .1;
+    left: -3px;
+}
+#meettheowner section.top div.background-text h1{
+    font-size: 165px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px var(--blue-colors);
+    font-family: Arial;
+}
+#meettheowner section.top span.define{
+    font-size: 1.1em;
+    text-transform: uppercase;
+    color: #7c7c7c;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+#meettheowner section.top h1 {
+    font-size: 53px;
+    font-family: 'barlowbold';
+    color: #147b97;
+    margin-bottom: 43px;
+    max-width: 90%;
+}
+#meettheowner section.bottom{
+    margin-top: 60px;
+}
+#meettheowner section.bottom div.everything-container{
+    display: flex;
+    width: 98%;
+    margin: 0 auto;
+    justify-content: space-between;
+    background: #f3f3f3;
+    height: 500px;
+    border-radius: 10px;
+}
+#meettheowner section.bottom div.everything-container div.left{
+    padding: 70px;
+    width: 55%;
+}
+#meettheowner section.bottom div.everything-container div.left h1{
+    font-size: 45px;
+    font-family: 'barlowbold';
+    margin-bottom: 5px;
+    color: var(--txt-color);
+}
+#meettheowner section.bottom div.everything-container div.left span.role{
+    font-size: 18px;
+    font-family: 'barlowsemibold';
+    color: #4b4b4b;
+    margin-bottom: 27px;
+    display: inline-block;
+}
+#meettheowner section.bottom div.everything-container div.left p{
+    font-size: 18px;
+    color: var(--grey-color);
+}
+#meettheowner section.bottom div.everything-container div.right{
+    width: 40%;
+}
+#meettheowner section.bottom div.everything-container div.right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /* Make the whole layout responsive */
 @media (max-width: 1125px){
