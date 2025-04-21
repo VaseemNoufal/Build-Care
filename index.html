@@ -344,7 +344,74 @@
     </ul>
   </section>
 </section>
+<section id="testimonila">
+  <section class="top">
+    <div class="background-text">
+      <h1>WHAT OUR CLIENTS SAY</h1>
+    </div>
+    <span class="name">OUR CLIENT</span>
+    <h1>TESTIMONIALS</h1>
+  </section>
+  <section class="bottom">
+    <div class="btnncon">
+      <div class="conchild one" id="leftnbbone">
+        <img src="images/chevron-down-solid.svg" alt="image"/>
+      </div>
+      <div class="conchild two" id="leftnbbtwo">
+        <img src="images/chevron-down-solid.svg" alt="image"/>
+      </div>
+    </div>
+    <ul class="corouseel">
+      <li class="card">
+        <img src="images/finalex1.png" alt="" class="imggg one">
+        <img src="images/finalex1.png" alt="" class="imggg two">
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium odit nemo ullam reprehenderit. Ipsum dolorum consectetur dignissimos blanditiis magnam, doloremque.</p>
+          <div class="po">
+            <h1 class="anme">Vaseem Noufal</h1>
+            <span class="role">Web Developer, Web Designer</span>
+          </div>
+        </div>
+      </li>
 
+      <li class="card">
+        <img src="images/finalex1.png" alt="" class="imggg one">
+        <img src="images/finalex1.png" alt="" class="imggg two">
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium odit nemo ullam reprehenderit. Ipsum dolorum consectetur dignissimos blanditiis magnam, doloremque.</p>
+          <div class="po">
+            <h1 class="anme">Noufal PKC</h1>
+            <span class="role">Web Developer, Web Designer</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="card">
+        <img src="images/finalex1.png" alt="" class="imggg one">
+        <img src="images/finalex1.png" alt="" class="imggg two">
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium odit nemo ullam reprehenderit. Ipsum dolorum consectetur dignissimos blanditiis magnam, doloremque.</p>
+          <div class="po">
+            <h1 class="anme">Fareeda K</h1>
+            <span class="role">Web Developer, Web Designer</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="card">
+        <img src="images/finalex1.png" alt="" class="imggg one">
+        <img src="images/finalex1.png" alt="" class="imggg two">
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium odit nemo ullam reprehenderit. Ipsum dolorum consectetur dignissimos blanditiis magnam, doloremque.</p>
+          <div class="po">
+            <h1 class="anme">Izyan Noufal</h1>
+            <span class="role">Web Developer, Web Designer</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</section>
 
   <!-- Script Section -->
   <script>
@@ -648,6 +715,90 @@ window.addEventListener("resize", applyResponsiveHeader);
             if (!isDragging) return;
             const walk = e.touches[0].pageX - startX;
             carousel.scrollLeft = scrollStart - walk;
+          });
+        </script>
+        <script>
+          const testiCarousel = document.querySelector('.corouseel');
+          const testiButtons = document.querySelectorAll('.btnncon .conchild');
+          const testiCardWidth = testiCarousel.querySelector('.card').offsetWidth;
+          let testiDragging = false, testiStartX, testiScrollStart;
+        
+          // Duplicate testimonial cards for looping effect
+          const testiCards = [...testiCarousel.children];
+          testiCards.slice(-2).forEach(card => {
+            const clone = card.cloneNode(true);
+            clone.classList.add("clone");
+            testiCarousel.prepend(clone);
+          });
+          testiCards.slice(0, 2).forEach(card => {
+            const clone = card.cloneNode(true);
+            clone.classList.add("clone");
+            testiCarousel.append(clone);
+          });
+        
+          // Scroll to the real start
+          testiCarousel.scrollLeft = testiCardWidth * 2;
+        
+          // Looping logic
+          testiCarousel.addEventListener('scroll', () => {
+            const left = testiCarousel.scrollLeft;
+            const max = testiCarousel.scrollWidth - testiCarousel.clientWidth;
+        
+            if (left <= 0) {
+              testiCarousel.scrollLeft = left + testiCardWidth * testiCards.length;
+            }
+            if (left >= max) {
+              testiCarousel.scrollLeft = left - testiCardWidth * testiCards.length;
+            }
+          });
+        
+          // Button navigation
+          testiButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+              const isLeft = btn.id.includes("one");
+              testiCarousel.scrollLeft += isLeft ? -testiCardWidth : testiCardWidth;
+            });
+          });
+        
+          // Drag with mouse
+          testiCarousel.addEventListener('mousedown', (e) => {
+            testiDragging = true;
+            testiStartX = e.pageX;
+            testiScrollStart = testiCarousel.scrollLeft;
+            testiCarousel.classList.add('draggingg');
+          });
+        
+          document.addEventListener('mouseup', () => {
+            testiDragging = false;
+            testiCarousel.classList.remove('draggingg');
+          });
+        
+          testiCarousel.addEventListener('mouseleave', () => {
+            testiDragging = false;
+            testiCarousel.classList.remove('draggingg');
+          });
+        
+          testiCarousel.addEventListener('mousemove', (e) => {
+            if (!testiDragging) return;
+            const walk = e.pageX - testiStartX;
+            testiCarousel.scrollLeft = testiScrollStart - walk;
+          });
+        
+          // Touch support
+          testiCarousel.addEventListener('touchstart', (e) => {
+            testiDragging = true;
+            testiStartX = e.touches[0].pageX;
+            testiScrollStart = testiCarousel.scrollLeft;
+          });
+        
+          testiCarousel.addEventListener('touchend', () => {
+            testiDragging = false;
+          });
+        
+          testiCarousel.addEventListener('touchmove', (e) => {
+            if (!testiDragging) return;
+            const walk = e.touches[0].pageX - testiStartX;
+            testiCarousel.scrollLeft = testiScrollStart - walk;
           });
         </script>
         
