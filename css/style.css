@@ -975,10 +975,10 @@ h1{
     filter: brightness(0) saturate(100%) invert(23%) sepia(100%) saturate(715%) hue-rotate(148deg) brightness(92%) contrast(89%);
 }
 #projects section.bottom .buttons-nav div.nonleft img{
-    transform: rotate(-90deg) !important;
+    transform: rotate(90deg) !important;
 }
 #projects section.bottom .buttons-nav div.nonright img{
-    transform: rotate(90deg) !important;
+    transform: rotate(-90deg) !important;
 }
 #projects section.bottom ul.corousel{
     display: grid;
@@ -986,18 +986,17 @@ h1{
     grid-auto-columns: calc((100% / 4) - 1px);
     gap: 10px;
     overflow: auto;
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
 }
 .corousel::-webkit-scrollbar {
     display: none; 
-  }
+}
 .corousel.dragging {
     user-select: none; 
     -webkit-user-select: none; 
     -ms-user-select: none;
     cursor: grab;
     scroll-behavior: auto;
-
 }
 #projects section.bottom ul.corousel li.card{
     border-radius: 15px;
@@ -1228,6 +1227,24 @@ h1{
         bottom: 14%;
     }
 }
+@media all and (max-width:880px){
+    #projects section.top .background-text h1{
+        font-size: 145px;
+    }
+    #projects section.top section.line .content-txt h1{
+        font-size: 63px;
+    }
+    #projects section.top section.line .content-txt span.label{
+        font-size: 20px;
+    }
+}
+@media all and (max-width: 870px){
+    #projects section.bottom ul.corousel{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 3) - 1px);
+    }
+}
 @media all and (max-width: 850px){
     .text-reveal h1{
         font-size: 2.8em;
@@ -1347,6 +1364,28 @@ h1{
     #home .spotlight .slider-ani .other::before{
         left: 15%;
     }
+    #projects section.bottom .buttons-nav{
+        width: 30%;
+    }
+}
+@media all and (max-width: 640px){
+    #projects section.bottom ul.corousel{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 2) - 1px);
+    }
+}
+@media all and (max-width: 615px){
+    #projects section.top .background-text h1{
+        font-size: 105px;
+    }
+    #projects section.top section.line{
+        flex-direction: column;
+    }
+    #projects section.top section.line .view{
+        align-self: unset;
+        margin-top: 10px;
+    }
 }
 @media all and (max-width: 605px){
     #home .spotlight .slider-ani{
@@ -1440,6 +1479,16 @@ h1{
         font-size: 18px;
     }
 }
+@media all and (max-width: 480px){
+    #projects section.bottom ul.corousel{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 1.5) - 1px);
+    }
+    #projects section.bottom .buttons-nav{
+        width: 40%;
+    }
+}
 @media all and (max-width: 470px){
     #home .spotlight .slider-ani {
         padding-top: 50%;
@@ -1474,6 +1523,18 @@ h1{
     }
     #whoweare section.wrapper div.left .label-ab{
         font-size: 1em;
+    }
+    #whatwedo section.bottom .slider-img{
+        width: 100%;
+    }
+    #whatwedo section.top h1{
+        font-size: 32px;
+    }
+    #whatwedo section.bottom .slider-img div.right h1{
+        font-size: 35px;
+    }
+    #whatwedo section.top .background-text h1{
+        font-size: 115px;
     }
 }
 @media all and (max-width: 436px){
@@ -1565,7 +1626,15 @@ h1{
     #home .spotlight .slider-ani .class-dsimg{
         top: 390px;
     }
-    
+    #projects section.bottom ul.corousel li.card{
+        height: 350px;
+    }
+    #projects section.top section.line .content-txt h1{
+        font-size: 53px;
+    }
+    #projects section.top section.line .content-txt span.label{
+        font-size: 18px;
+    }
 }
 @media all and (max-width: 390px){
     #home .spotlight .slider-ani{
@@ -1590,6 +1659,14 @@ h1{
     }
     #whoweare section.wrapper div.right .projects h1{
         font-size: 3.2em;
+    }
+    #projects section.bottom ul.corousel{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 1.5) - 1px);
+    }
+    #projects section.bottom .buttons-nav{
+        width: 40%;
     }
 }
 @media all and (max-width:370px){
