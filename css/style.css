@@ -1370,6 +1370,82 @@ h1{
     background: #2dd2ff;
     color: #fff;
 }
+/* Footer Styles Section */
+footer{
+    height: 160px;
+}
+footer div.row{
+    display: flex;
+    height: 100%;
+}
+footer div.row div.item{
+    width: 25%;
+    padding: 30px;
+    border-left: 1px solid var(--txt-color);
+    border-right: 1px solid var(--txt-color);
+    border-bottom: 1px solid var(--txt-color);
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+footer div.row.one div.item{
+    height: 85%;
+}
+footer div.row.one div.item.large{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer div.row.one div.item.large ul li{
+    margin-right: 20px;
+    font-size: 17px;
+}
+footer div.row.one div.item.small.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer div.row.one div.item.small.icon ul li{
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+}
+footer div.row.one div.item.small.icon ul li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+footer div.row.one div.item.small.icon ul li a img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: brightness(0) saturate(100%) invert(23%) sepia(100%) saturate(715%) hue-rotate(148deg) brightness(92%) contrast(89%);;
+}
+footer div.row.one div.item.large ul li a{
+    color: var(--txt-color);
+}
+footer div.row div.item.small>h1{
+    width: 220px;
+    margin: auto;
+    position: absolute;
+    top: -40px;
+}
+footer div.row div.item.small>h1 a{
+    width: 100%;
+    display: block;
+}
+footer div.row div.item.small>h1 a img{
+    width: 100%;
+    display: block;
+}
+footer div.row div.item.large{
+    width: 50%;
+}
+footer div.row ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* Make the whole layout responsive */
 @media (max-width: 1125px){
     #home header nav ul{
