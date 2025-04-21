@@ -1173,7 +1173,8 @@ h1{
     transform: rotate(-90deg);
 }
 #testimonila section.bottom .btnncon .conchild img{
-    filter: brightness(0) saturate(100%) invert(23%) sepia(100%) saturate(715%) hue-rotate(148deg) brightness(92%) contrast(89%);;
+    filter: brightness(0) saturate(100%) invert(23%) sepia(100%) saturate(715%) hue-rotate(148deg) brightness(92%) contrast(89%);
+    width: 95%;
 }
 #testimonila section.bottom ul.corouseel{
     display: grid;
