@@ -126,6 +126,10 @@ body {
 	overflow-x: hidden;
 	min-width: 320px;
 	font-weight: 500;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 input,textarea,select{
     font-family: 'barlowsemibold',Arial, Helvetica, sans-serif;
@@ -1154,12 +1158,13 @@ h1{
 }
 #testimonila section.bottom .btnncon .conchild{
     background: rgba(0, 0, 0, 0.2);
-    padding: .5em;
+    padding: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     width: 42px;
+    line-height: 1;
 }
 #testimonila section.bottom .btnncon .conchild.one{
     transform: rotate(90deg);
