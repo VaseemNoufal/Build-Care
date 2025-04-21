@@ -739,13 +739,13 @@ window.addEventListener("resize", applyResponsiveHeader);
             carousel.scrollLeft = scrollStart - walk;
           });
         </script>
-        <script>
+        <!-- <script>
           const testiCarousel = document.querySelector('.corouseel');
           const testiButtons = document.querySelectorAll('.btnncon .conchild');
           const testiCardWidth = testiCarousel.querySelector('.card').offsetWidth;
           let testiDragging = false, testiStartX, testiScrollStart;
         
-          // Duplicate testimonial cards for looping effect
+
           const testiCards = [...testiCarousel.children];
           testiCards.slice(-2).forEach(card => {
             const clone = card.cloneNode(true);
@@ -758,7 +758,7 @@ window.addEventListener("resize", applyResponsiveHeader);
             testiCarousel.append(clone);
           });
         
-          // Scroll to the real start
+
           testiCarousel.scrollLeft = testiCardWidth * 2;
         
           // Looping logic
@@ -822,6 +822,90 @@ window.addEventListener("resize", applyResponsiveHeader);
             const walk = e.touches[0].pageX - testiStartX;
             testiCarousel.scrollLeft = testiScrollStart - walk;
           });
+        </script>
+         -->
+         <script>
+          const clientCarousel = document.querySelector('.corouseel');
+          const clientNavButtons = document.querySelectorAll('.btnncon .conchild');
+          const clientCard = clientCarousel.querySelector('.card');
+          const clientCardWidth = clientCard.offsetWidth;
+          let clientIsDragging = false, clientStartX, clientScrollStart;
+          let clientAutoScrollTimer;
+        
+          // Clone all cards (seamless loop)
+          const clientOriginalCards = [...clientCarousel.children];
+          clientOriginalCards.forEach(item => {
+            clientCarousel.appendChild(item.cloneNode(true));
+            clientCarousel.prepend(item.cloneNode(true));
+          });
+        
+          // Start at middle
+          const clientOriginalCardCount = clientOriginalCards.length;
+          clientCarousel.scrollLeft = clientCardWidth * clientOriginalCardCount;
+        
+          // Infinite loop logic
+          clientCarousel.addEventListener('scroll', () => {
+            const clientMaxScroll = clientCarousel.scrollWidth - clientCarousel.clientWidth;
+            if (clientCarousel.scrollLeft <= 0) {
+              clientCarousel.scrollLeft = clientCardWidth * clientOriginalCardCount;
+            }
+            if (clientCarousel.scrollLeft >= clientMaxScroll - clientCardWidth) {
+              clientCarousel.scrollLeft = clientCardWidth * clientOriginalCardCount - clientCardWidth;
+            }
+          });
+        
+          // Button controls
+          clientNavButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+              const goLeft = btn.id.includes("one");
+              clientCarousel.style.scrollBehavior = "smooth";
+              clientCarousel.scrollLeft += goLeft ? -clientCardWidth : clientCardWidth;
+              setTimeout(() => clientCarousel.style.scrollBehavior = "auto", 400);
+            });
+          });
+        
+          // Dragging with mouse/touch
+          const startClientDrag = (e) => {
+            clientIsDragging = true;
+            clientStartX = e.pageX || e.touches[0].pageX;
+            clientScrollStart = clientCarousel.scrollLeft;
+          };
+        
+          const duringClientDrag = (e) => {
+            if (!clientIsDragging) return;
+            const currentX = e.pageX || e.touches[0].pageX;
+            const walkDistance = currentX - clientStartX;
+            clientCarousel.scrollLeft = clientScrollStart - walkDistance;
+          };
+        
+          const stopClientDrag = () => {
+            clientIsDragging = false;
+          };
+        
+          clientCarousel.addEventListener('mousedown', startClientDrag);
+          clientCarousel.addEventListener('mousemove', duringClientDrag);
+          document.addEventListener('mouseup', stopClientDrag);
+          clientCarousel.addEventListener('mouseleave', stopClientDrag);
+        
+          clientCarousel.addEventListener('touchstart', startClientDrag);
+          clientCarousel.addEventListener('touchmove', duringClientDrag);
+          clientCarousel.addEventListener('touchend', stopClientDrag);
+        
+          // Autoplay every 10s
+          const startClientAutoplay = () => {
+            clientAutoScrollTimer = setInterval(() => {
+              clientCarousel.style.scrollBehavior = "smooth";
+              clientCarousel.scrollLeft += clientCardWidth;
+              setTimeout(() => clientCarousel.style.scrollBehavior = "auto", 400);
+            }, 10000);
+          };
+        
+          const stopClientAutoplay = () => clearInterval(clientAutoScrollTimer);
+        
+          clientCarousel.addEventListener('mouseenter', stopClientAutoplay);
+          clientCarousel.addEventListener('mouseleave', startClientAutoplay);
+        
+          startClientAutoplay();
         </script>
         
 </body>

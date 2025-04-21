@@ -1073,6 +1073,7 @@ h1{
  #testimonila{
     padding: 75px 0 130px;
     position: relative;
+    overflow: hidden;
 }
 #testimonila::before{
     content: "";
@@ -1231,6 +1232,7 @@ h1{
 #meettheowner{
     padding: 80px 0;
     position: relative;
+    overflow: hidden;
 }
 #meettheowner section.top div.background-text{
     position: absolute;
