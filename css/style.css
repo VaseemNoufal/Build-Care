@@ -675,23 +675,6 @@ h1{
     margin-bottom: 20px;
     padding-left: 3px;
 }
-#whoweare section.wrapper div.left .about-ab{
-    color: #525252;
-    font-size: 18px;
-    position: relative;
-}
-#whoweare section.wrapper div.left .about-ab::before{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 60%;
-    right: -50px;
-    top: 7px;
-    height: 3px;
-    background: var(--blue-color);
-    animation: fi 2s ease;
-
-}
 @keyframes fi {
     0%{
         width: 0;
@@ -1295,6 +1278,7 @@ h1{
     background: #f3f3f3;
     height: 500px;
     border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 #meettheowner section.bottom div.everything-container div.left{
     padding: 70px;
@@ -1324,6 +1308,7 @@ h1{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: left;
 }
 /* Contact Banner Section */
 #connectwithus{
@@ -1490,6 +1475,7 @@ footer div.row.two div.item.medium.secondone ul li a{
     align-items: center;
     justify-content: center;
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+    opacity: .8;
 }
 .whatsappp-section-div a{
     display: flex;
@@ -1513,6 +1499,7 @@ footer div.row.two div.item.medium.secondone ul li a{
     border-radius: 5px;
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    opacity: .7;
 }
 .go-top-icon a{
     width: 100%;
@@ -1526,6 +1513,21 @@ footer div.row.two div.item.medium.secondone ul li a{
     filter: invert(1);
 }
 /* Make the whole layout responsive */
+@media all and (min-width: 1300px){
+    .text-reveal h1{
+        font-size: 4.4em;
+    }
+}
+@media all and (max-width: 1250px){
+    #testimonila section.top .background-text h1{
+        font-size: 90px;
+    }
+}
+@media all and (max-width: 1140px){
+    footer div.row.two div.item.medium.secondone ul li{
+        font-size: 16px;
+    }
+}
 @media (max-width: 1125px){
     #home header nav ul{
         display: none;
@@ -1544,6 +1546,17 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #home .spotlight .slider-ani .other::before{
         left: 10%;
+    }
+    footer div.row div.item.second p a{
+        font-size: 17px;
+    }
+}
+@media all and (max-width: 1100px){
+    #testimonila section.top .background-text h1{
+        font-size: 80px;
+    }
+    #meettheowner section.bottom div.everything-container div.right{
+        width: 45%;
     }
 }
 @media all and (max-width:1090px){
@@ -1600,6 +1613,25 @@ footer div.row.two div.item.medium.secondone ul li a{
         background: rgba(0, 0, 0, 0.5);
     }
 }
+@media (max-width: 1014px){
+    .whatsappp-section-div{
+        width: 20%;
+    }
+    #projects section.top .background-text h1{
+        font-size: 155px;
+    }
+    #connectwithus div.content{
+        width: 70%;
+    }
+}
+@media all and (max-width: 980px){
+    #whatwedo section.bottom .slider-img{
+        width: 95%;
+    }
+    #meettheowner section.bottom div.everything-container div.right{
+        width: 49%;
+    }
+}
 @media all and (max-width: 970px){
     #home .spotlight .slider-ani .other::before{
         left: 12%;
@@ -1633,12 +1665,34 @@ footer div.row.two div.item.medium.secondone ul li a{
         bottom: 21%;
     }
 }
+@media all and (max-width: 960px){
+    #testimonila section.bottom ul.corouseel li.card .imggg{
+        width: 65px;
+    }
+}
+@media all and (max-width: 930px){
+    #projects section.top .background-text h1{
+        font-size: 135px;
+    }
+    #connectwithus div.content h1{
+        font-size: 45px;
+    }
+    #connectwithus div.content div.bttn-container a.b{
+        font-size: 13px;
+    }
+}
 @media all and (max-width: 920px){
     .text-reveal h1{
         font-size: 3em;
     }
     #home .spotlight .slider-ani{
         padding-top: 21.5%;
+    }
+    #testimonila section.top .background-text{
+        top: 25px;
+    }
+    #testimonila section.top .background-text h1{
+        font-size: 70px;
     }
 }
 @media all and (max-width: 890px){
@@ -1670,11 +1724,11 @@ footer div.row.two div.item.medium.secondone ul li a{
     .spotlight .navigation-area{
         bottom: 14%;
     }
+    #whatwedo section.bottom .slider-img div.right{
+        width: 39%;
+    }
 }
 @media all and (max-width:880px){
-    #projects section.top .background-text h1{
-        font-size: 145px;
-    }
     #projects section.top section.line .content-txt h1{
         font-size: 63px;
     }
@@ -1687,6 +1741,39 @@ footer div.row.two div.item.medium.secondone ul li a{
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: calc((100% / 3) - 1px);
+    }
+
+}
+@media all and (max-width: 860px){
+    #meettheowner section.bottom div.everything-container{
+        flex-direction: column-reverse;
+        height: 800px;
+    }
+    #meettheowner section.bottom div.everything-container div.left{
+        width: 100%;
+        height: 42%;
+    }
+    #meettheowner section.bottom div.everything-container div.right{
+        width: 100%;
+        height: 58%;
+    }
+    #meettheowner section.bottom div.everything-container div.right img{
+        border-radius: 10px;
+    }
+    #meettheowner section.bottom div.everything-container div.left{
+        padding: 70px;
+    }
+    #testimonila section.bottom ul.corouseel li.card .imggg{
+        width: 60px;
+    }
+    #testimonila section.bottom ul.corouseel li.card div.po h1.anme{
+        font-size: 28px;
+    }
+    #testimonila section.bottom ul.corouseel li.card div.content p{
+        font-size: 18px;
+    }
+    #testimonila section.bottom ul.corouseel{
+        grid-auto-columns: calc((77%) - 1px);
     }
 }
 @media all and (max-width: 850px){
@@ -1709,6 +1796,17 @@ footer div.row.two div.item.medium.secondone ul li a{
     #whoweare section.wrapper div.right .projects{
         width: unset;
     }
+    #testimonila section.top .background-text h1{
+        font-size: 65px;
+    }
+    #testimonila section.bottom ul.corouseel{
+        grid-auto-columns: calc((80%) - 1px);
+    }
+}
+@media all and (max-width: 830px){
+    #meettheowner section.top h1{
+        font-size: 48px;
+    }
 }
 @media all and (max-width: 800px){
     #home .spotlight .slider-ani{
@@ -1719,6 +1817,17 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     .spotlight .navigation-area ul li{
         font-size: 19px;
+    }
+    #whoweare section.wrapper div.left .backgrounud-text h1{
+        font-size: 135px;
+    }
+    #whoweare section.wrapper div.left .backgrounud-text{
+        top: 15px;
+    }
+}
+@media all and (max-width: 740px) {
+    #connectwithus div.content{
+        width: 90%;
     }
 }
 @media all and (max-width: 760px){
@@ -1779,10 +1888,16 @@ footer div.row.two div.item.medium.secondone ul li a{
     .spotlight .navigation-area{
         bottom: 14%;
     }
+    #meettheowner section.bottom div.everything-container div.left{
+        padding: 50px;
+    }
+    #whatwedo::after{
+        background-size: 40%;
+    }
 }
 @media all and (max-width: 670px){
     #home .spotlight .slider-ani{
-        padding-top: 37%;
+        padding-top: 47%;
     }
     .spotlight .buttons{
         right: 6%;
@@ -1804,6 +1919,7 @@ footer div.row.two div.item.medium.secondone ul li a{
         width: 100%;
     }
 }
+/* #connectwithus div.content */
 @media all and (max-width:670px){
     #home .spotlight .slider-ani .other::before{
         left: 15%;
@@ -1811,12 +1927,29 @@ footer div.row.two div.item.medium.secondone ul li a{
     #projects section.bottom .buttons-nav{
         width: 30%;
     }
+    #testimonila section.bottom ul.corouseel {
+        grid-auto-columns: calc((90%) - 1px);
+    }
+    #testimonila section.top .background-text h1{
+        font-size: 50px;
+    }
 }
 @media all and (max-width: 640px){
     #projects section.bottom ul.corousel{
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: calc((100% / 2) - 1px);
+    }
+    #meettheowner section.bottom div.everything-container div.left h1{
+        font-size: 43px;
+    }
+}
+@media all and (max-width: 630px){
+    #testimonila section.bottom ul.corouseel li.card div.content p{
+        margin-bottom: 10px;
+    }
+    #connectwithus{
+        padding: 80px 0;
     }
 }
 @media all and (max-width: 615px){
@@ -1856,6 +1989,20 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #whoweare::after{
         background-size: 25%;
+    }
+    #meettheowner section.bottom div.everything-container{
+        width: 100%;
+    }
+    #connectwithus div.content h1{
+        font-size: 43px;
+    }
+    #connectwithus div.content div.bttn-container a.b{
+        padding: 10px 18px;
+    }
+}
+@media all and (max-width: 600px){
+    #testimonila section.bottom ul.corouseel li.card .imggg{
+        width: 55px;
     }
 }
 @media all and (max-width:550px){
@@ -2061,6 +2208,9 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #whoweare section.wrapper div.right .projects {
         width: 180px;
+    }
+    #whoweare section.wrapper div.right .projects{
+        margin-left: 15%;
     }
 }
 @media all and (max-width: 400px){
