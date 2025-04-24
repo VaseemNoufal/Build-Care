@@ -1952,6 +1952,14 @@ footer div.row.two div.item.medium.secondone ul li a{
         padding: 80px 0;
     }
 }
+@media all and (max-width: 620px){
+    #testimonila section.top>h1{
+        font-size: 65px;
+    }
+    #testimonila section.top span.name{
+        font-size: 23px;
+    }
+}
 @media all and (max-width: 615px){
     #projects section.top .background-text h1{
         font-size: 105px;
@@ -2015,6 +2023,9 @@ footer div.row.two div.item.medium.secondone ul li a{
     #whoweare section.wrapper div.right .projects h1{
         font-size: 4.5em;
     }
+    #whatwedo section.bottom .slider-img div.right h1{
+        font-size: 45px;
+    }
 }
 @media all and (max-width: 541px){
     #home header div.right img.globe{
@@ -2041,6 +2052,40 @@ footer div.row.two div.item.medium.secondone ul li a{
     .text-reveal h1{
         font-size: 3.2em;
     }
+    #connectwithus div.content{
+        width: 100%;
+    }
+    #testimonila section.bottom ul.corouseel {
+        grid-auto-columns: calc((95%) - 1px);
+    }
+}
+@media all and (max-width: 530px){
+    #testimonila section.top>h1{
+        font-size: 57px;
+    }
+    #testimonila section.bottom ul.corouseel {
+        grid-auto-columns: calc((95%) - 1px);
+    }
+}
+@media all and (max-width: 525px){
+    #whatwedo section.top h1{
+        font-size: 44px;
+    }
+    #whatwedo section.bottom .slider-img div.right h1{
+        font-size: 40px;
+    }
+    #projects section.top .background-text h1{
+        font-size: 95px;
+    }
+    #projects section.top{
+        width: 93%;
+    }
+    #testimonila section.top {
+        width: 95%;
+    }
+    #meettheowner section.bottom div.everything-container div.left{
+        padding: 25px;
+    }
 }
 @media all and (max-width: 515px){
     #home .spotlight .slider-ani {
@@ -2054,6 +2099,12 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     .spotlight .navigation-area{
         bottom: 18%;
+    }
+    #meettheowner section.bottom div.everything-container div.right{
+        height: 53%;
+    }
+    #meettheowner section.bottom div.everything-container div.left{
+        height: 47%;
     }
 }
 @media all and (max-width:500px){
@@ -2130,6 +2181,24 @@ footer div.row.two div.item.medium.secondone ul li a{
     #whatwedo section.top .background-text h1{
         font-size: 115px;
     }
+    #meettheowner section.bottom div.everything-container div.right{
+        height: 47%;
+    }
+    #meettheowner section.bottom div.everything-container{
+        height: 700px;
+    }
+    #meettheowner section.bottom div.everything-container div.left{
+        height: 53%;
+    }
+}
+@media all and (max-width: 440px){
+    #testimonila section.bottom ul.corouseel li.card div.content p{
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+    #meettheowner section.top div.background-text h1{
+        font-size: 105px;
+    }
 }
 @media all and (max-width: 436px){
     #home .spotlight .slider-ani {
@@ -2193,6 +2262,18 @@ footer div.row.two div.item.medium.secondone ul li a{
         width: 170px;
     }
 }
+@media all and (max-width: 420px){
+    #meettheowner section.top h1{
+        font-size: 43px;
+    }
+    #connectwithus div.content div.bttn-container a.b{
+        padding: 8px 16px;
+        margin-right: 20px;
+    }
+    #connectwithus div.content h1{
+        font-size: 45px;
+    }
+}
 @media all and (max-width: 425px){
     #whoweare section.wrapper div.left h1.main-ab{
         font-size: 39px;
@@ -2211,6 +2292,18 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #whoweare section.wrapper div.right .projects{
         margin-left: 15%;
+    }
+    #testimonila section.bottom ul.corouseel li.card{
+        padding: 10px;
+    }
+    #testimonila section.bottom ul.corouseel li.card div.content{
+        margin: 9% auto 0;
+    }
+    #testimonila section.top .background-text h1 {
+        font-size: 40px;
+    }
+    #testimonila section.bottom .btnncon{
+        width: 35%;
     }
 }
 @media all and (max-width: 400px){
@@ -2245,6 +2338,22 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #home .spotlight .slider-ani .other::before{
         right: 28%;
+    }
+    #testimonila section.top>h1{
+        font-size: 50px;
+    }
+    #testimonila section.bottom ul.corouseel li.card div.content p{
+        margin-bottom: 10px;
+    }
+    #testimonila section.bottom ul.corouseel li.card .imggg{
+        width: 50px;
+    }
+    #connectwithus div.content div.bttn-container a.b{
+        margin-right: 10px;
+        padding: 7px 15px;
+    }
+    #meettheowner section.bottom div.everything-container div.left h1{
+        font-size: 40px;
     }
 }
 @media all and (max-width: 380px){
