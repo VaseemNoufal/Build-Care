@@ -1637,7 +1637,7 @@ footer div.row.two div.item.medium.secondone ul li a{
         left: 12%;
     }
     .text-reveal h1{
-        font-size: 3.2em;
+        font-size: 4em;
     }
     #home .spotlight .slider-ani{
         padding-top: 20.1%;
@@ -1778,7 +1778,8 @@ footer div.row.two div.item.medium.secondone ul li a{
 }
 @media all and (max-width: 850px){
     .text-reveal h1{
-        font-size: 2.8em;
+        font-size: 3.8em;
+        max-width: 75%;
     }
     #home .spotlight .slider-ani{
         padding-top: 23%;
@@ -1825,9 +1826,9 @@ footer div.row.two div.item.medium.secondone ul li a{
         top: 15px;
     }
 }
-@media all and (max-width: 740px) {
-    #connectwithus div.content{
-        width: 90%;
+@media all and (max-width: 770px){
+    .whatsappp-section-div{
+        width: 30%;
     }
 }
 @media all and (max-width: 760px){
@@ -1871,6 +1872,11 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     .text-reveal h1{
         font-size: 3.1em;
+    }
+}
+@media all and (max-width: 740px) {
+    #connectwithus div.content{
+        width: 90%;
     }
 }
 @media all and (max-width: 732px){
@@ -1958,6 +1964,16 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #testimonila section.top span.name{
         font-size: 23px;
+    }
+    #projects section.bottom ul.corousel li.card div.hoverlay{
+        position: absolute;
+        top: 0;
+        color: #fff;
+        height: 100%;
+        transition: all .5s ease;
+    }
+    #projects section.bottom ul.corousel li.card:hover div.hoverlay {
+        pointer-events: none;
     }
 }
 @media all and (max-width: 615px){
@@ -2106,6 +2122,9 @@ footer div.row.two div.item.medium.secondone ul li a{
     #meettheowner section.bottom div.everything-container div.left{
         height: 47%;
     }
+    .whatsappp-section-div{
+        width: 35%;
+    }
 }
 @media all and (max-width:500px){
     #home .spotlight .slider-ani .other::before{
@@ -2198,6 +2217,9 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #meettheowner section.top div.background-text h1{
         font-size: 105px;
+    }
+    .whatsappp-section-div{
+        width: 40%;
     }
 }
 @media all and (max-width: 436px){
@@ -2305,6 +2327,9 @@ footer div.row.two div.item.medium.secondone ul li a{
     #testimonila section.bottom .btnncon{
         width: 35%;
     }
+    #meettheowner section.wrapper{
+        width: 93%;
+    }
 }
 @media all and (max-width: 400px){
     #home .spotlight .slider-ani .other::before{
@@ -2377,6 +2402,12 @@ footer div.row.two div.item.medium.secondone ul li a{
     #projects section.bottom .buttons-nav{
         width: 40%;
     }
+    .whatsappp-section-div{
+        width: 45%;
+    }
+    #testimonila section.bottom ul.corouseel li.card div.content p{
+        font-size: 16px;
+    }
 }
 @media all and (max-width:370px){
     .spotlight .navigation-area ul li{
@@ -2388,6 +2419,18 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #whoweare section.wrapper div.left .p-ab{
         font-size: 15.7px;
+    }
+    #connectwithus div.content div.bttn-container a.b{
+        padding: 6px 10px;
+        margin-right: 5px;
+    }
+    #meettheowner section.top h1{
+        font-size: 35px;
+    }
+}
+@media all and (max-width: 350px){
+    .whatsappp-section-div{
+        width: 50%;
     }
 }
 @media all and (max-width: 340px){
