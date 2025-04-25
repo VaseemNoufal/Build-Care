@@ -26,6 +26,22 @@ h1::selection{
     background: #11809e;
     color: #fff;
 }
+h2::selection{
+    background: #11809e;
+    color: #fff;
+}
+h3::selection{
+    background: #11809e;
+    color: #fff;
+}
+h4::selection{
+    background: #11809e;
+    color: #fff;
+}
+h5::selection{
+    background: #11809e;
+    color: #fff;
+}
 p::selection{
     background: #11809e;
     color: #fff;
@@ -39,6 +55,10 @@ span::selection{
     color: #fff;
 }
 li::selection{
+    background: #11809e;
+    color: #fff;
+}
+input::selection{
     background: #11809e;
     color: #fff;
 }
@@ -1456,23 +1476,98 @@ h1{
     margin-bottom: 40px;
     overflow: hidden;
 }
+#contactusab section.top{
+    margin-bottom: 40px;
+}
 #contactusab section.top section.wrapper{
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 #contactusab section.top section.wrapper div.left{
-    width: 50%;
+    width: 48%;
+    padding-top: 25px;
 }
 #contactusab section.top section.wrapper div.right{
-    width: 46%;
+    width: 48%;
+}
+#contactusab section.top section.wrapper div.right div.contactformcontainer{
+    width: 90%;
+    box-shadow: 0px 0px 7px 2px rgba(231, 231, 231, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+#contactusab section.top section.wrapper div.right div.contactformcontainer form h3{
+    color: var(--txt-color);
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    transition: all 1s ease;
+    margin-bottom: 30px;
+    font-family: 'barlowbold';
+}
+
+#contactusab section.top section.wrapper div.right div.contactformcontainer form input{
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(1px);
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px 2px rgba(231, 231, 231, 0.9);
+    color: #a5a5a5;
+    font-size: 14px;
+    transition: all 1s ease;
+}
+#contactusab section.top section.wrapper div.right div.contactformcontainer form textarea{
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px 2px rgba(231, 231, 231, 0.9);
+    color: #cdcdcd;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    height: 170px;
+    transition: all 1s ease;
 }
 #contactusab section.top section.wrapper div.right div.contactformcontainer form{
     display: flex;
     flex-direction: column;
 }
-#contactusab section.top section.wrapper div.right div.contactformcontainer form input{
-    background: rgba(0, 0, 0, 0.3);
+#contactusab section.top section.wrapper div.left span.label{
+    font-size: 18px;
+    font-family: 'barlowbold';
+    color: var(--grey-color);
+    margin-bottom: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+#contactusab section.top section.wrapper div.left h1{
+    font-size: 45px;
+    line-height: 1em;
+    font-family: 'barlowbold';
+    margin-bottom: 40px;
+    color: var(--txt-color);
+}
+#contactusab section.top section.wrapper div.left ul.details li{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+#contactusab section.top section.wrapper div.left ul.details li a{
+    display: flex;
+    align-items: center;
+    color: var(--grey-color);
+}
+#contactusab section.top section.wrapper div.left ul.details li a img{
+    width: 19px;
+    height: auto;
+    margin-right: 10px;
+    filter: brightness(0) saturate(100%) invert(23%) sepia(100%) saturate(715%) hue-rotate(148deg) brightness(92%) contrast(89%);
 }
 .map-container {
     width: 90%;
@@ -1482,7 +1577,6 @@ h1{
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-  
 /* Footer Styles Section */
 footer{
     padding: 10px 0;
@@ -1993,6 +2087,16 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #whoweare section.wrapper div.left .backgrounud-text{
         top: 15px;
+    }
+    #contactusab section.top section.wrapper{
+        flex-wrap: wrap;
+    }
+    #contactusab section.top section.wrapper div.left{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #contactusab section.top section.wrapper div.right{
+        width: 100%;
     }
 }
 @media all and (max-width: 770px){
