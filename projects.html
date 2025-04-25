@@ -284,11 +284,44 @@
         }
   
   // Apply on load, scroll and resize
-  window.addEventListener("load", applyResponsiveHeader);
-  window.addEventListener("scroll", applyResponsiveHeader);
-  window.addEventListener("resize", applyResponsiveHeader);
-  
-  
-      </script>
+        window.addEventListener("load", applyResponsiveHeader);
+        window.addEventListener("scroll", applyResponsiveHeader);
+        window.addEventListener("resize", applyResponsiveHeader);
+    </script>
+    <script>
+      const mobile = document.getElementById('uniwuee');
+      const mobilex = document.getElementById('uniwueex')
+      const nine = document.getElementById('ninexx')
+      mobile.addEventListener("click", () => {
+        nine.style.left = "0";
+      })
+      mobilex.addEventListener("click", () => {
+        nine.style.left = "100%";
+      })
+    </script>
+     <script>
+      const vidch = document.getElementById('sub');
+      const lauguagee = document.getElementById('drop-lan-heaad');
+      let isOpen = false;
+    
+      vidch.addEventListener("click", () => {
+        isOpen = !isOpen;
+    
+        lauguagee.style.display = isOpen ? "flex" : "none";
+        vidch.style.transform = isOpen ? "rotate(180deg)" : "rotate(0deg)";
+      });
+    </script>
+    <script>
+      const vidchtwo = document.getElementById('subtwo');
+      const lauguageetwo = document.getElementById('drop-lan-heaadtwo');
+      let isOpentwo = false;
+    
+      vidchtwo.addEventListener("click", () => {
+        isOpentwo = !isOpentwo;
+    
+        lauguageetwo.style.display = isOpentwo ? "flex" : "none";
+        vidchtwo.style.transform = isOpentwo ? "rotate(180deg)" : "rotate(0deg)";
+      });
+    </script>
 </body>
 </html>

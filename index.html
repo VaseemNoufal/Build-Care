@@ -841,106 +841,106 @@ window.addEventListener("resize", applyResponsiveHeader);
      </script>
          <script>
             const carousel = document.querySelector('.corousel');
-const arrowBtns = document.querySelectorAll('.nonparent div');
-const firstCard = carousel.querySelector('.card');
-const firstCardWidth = firstCard.offsetWidth;
+            const arrowBtns = document.querySelectorAll('.nonparent div');
+            const firstCard = carousel.querySelector('.card');
+            const firstCardWidth = firstCard.offsetWidth;
 
-let isDragging = false, startX = 0, scrollStart = 0;
+            let isDragging = false, startX = 0, scrollStart = 0;
 
-// 1. Clone cards to both ends for infinite loop
-const cards = [...carousel.children];
-const clonesToAdd = 4;
+            // 1. Clone cards to both ends for infinite loop
+            const cards = [...carousel.children];
+            const clonesToAdd = 4;
 
-cards.slice(-clonesToAdd).forEach(card => {
-  const clone = card.cloneNode(true);
-  clone.classList.add('clone');
-  carousel.prepend(clone);
-});
-cards.slice(0, clonesToAdd).forEach(card => {
-  const clone = card.cloneNode(true);
-  clone.classList.add('clone');
-  carousel.append(clone);
-});
+            cards.slice(-clonesToAdd).forEach(card => {
+              const clone = card.cloneNode(true);
+              clone.classList.add('clone');
+              carousel.prepend(clone);
+            });
+            cards.slice(0, clonesToAdd).forEach(card => {
+              const clone = card.cloneNode(true);
+              clone.classList.add('clone');
+              carousel.append(clone);
+            });
 
-// 2. Scroll to first real card (after prepended clones)
-carousel.scrollLeft = firstCardWidth * clonesToAdd;
-carousel.style.scrollBehavior = 'smooth';
+            // 2. Scroll to first real card (after prepended clones)
+            carousel.scrollLeft = firstCardWidth * clonesToAdd;
+            carousel.style.scrollBehavior = 'smooth';
 
-// 3. Infinite scroll logic
-function fixInfiniteScroll() {
-  const totalRealCardsWidth = firstCardWidth * cards.length;
-  const scrollLeft = carousel.scrollLeft;
+            // 3. Infinite scroll logic
+            function fixInfiniteScroll() {
+              const totalRealCardsWidth = firstCardWidth * cards.length;
+              const scrollLeft = carousel.scrollLeft;
 
-  // Disable animation for jump
-  carousel.style.scrollBehavior = 'auto';
+              // Disable animation for jump
+              carousel.style.scrollBehavior = 'auto';
 
-  if (scrollLeft <= firstCardWidth) {
-    carousel.scrollLeft = scrollLeft + totalRealCardsWidth;
-  } else if (scrollLeft >= carousel.scrollWidth - carousel.clientWidth - firstCardWidth) {
-    carousel.scrollLeft = scrollLeft - totalRealCardsWidth;
-  }
+              if (scrollLeft <= firstCardWidth) {
+                carousel.scrollLeft = scrollLeft + totalRealCardsWidth;
+              } else if (scrollLeft >= carousel.scrollWidth - carousel.clientWidth - firstCardWidth) {
+                carousel.scrollLeft = scrollLeft - totalRealCardsWidth;
+              }
 
-  // Re-enable smooth after a frame
-  requestAnimationFrame(() => {
-    carousel.style.scrollBehavior = 'smooth';
-  });
-}
+              // Re-enable smooth after a frame
+              requestAnimationFrame(() => {
+                carousel.style.scrollBehavior = 'smooth';
+              });
+            }
 
-// Efficient scroll detection
-let isScrolling = false;
-carousel.addEventListener('scroll', () => {
-  if (!isScrolling) {
-    requestAnimationFrame(() => {
-      fixInfiniteScroll();
-      isScrolling = false;
-    });
-    isScrolling = true;
-  }
-});
+            // Efficient scroll detection
+            let isScrolling = false;
+            carousel.addEventListener('scroll', () => {
+              if (!isScrolling) {
+                requestAnimationFrame(() => {
+                  fixInfiniteScroll();
+                  isScrolling = false;
+                });
+                isScrolling = true;
+              }
+            });
 
-// 4. Arrow buttons
-arrowBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const dir = btn.id === 'leftnb' ? -1 : 1;
-    carousel.scrollLeft += dir * firstCardWidth;
-  });
-});
+            // 4. Arrow buttons
+            arrowBtns.forEach(btn => {
+              btn.addEventListener('click', () => {
+                const dir = btn.id === 'leftnb' ? -1 : 1;
+                carousel.scrollLeft += dir * firstCardWidth;
+              });
+            });
 
-// 5. Drag support (mouse)
-carousel.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  startX = e.pageX;
-  scrollStart = carousel.scrollLeft;
-  carousel.classList.add('dragging');
-});
+            // 5. Drag support (mouse)
+            carousel.addEventListener('mousedown', (e) => {
+              isDragging = true;
+              startX = e.pageX;
+              scrollStart = carousel.scrollLeft;
+              carousel.classList.add('dragging');
+            });
 
-document.addEventListener('mouseup', () => {
-  isDragging = false;
-  carousel.classList.remove('dragging');
-});
+            document.addEventListener('mouseup', () => {
+              isDragging = false;
+              carousel.classList.remove('dragging');
+            });
 
-carousel.addEventListener('mousemove', (e) => {
-  if (!isDragging) return;
-  const walk = e.pageX - startX;
-  carousel.scrollLeft = scrollStart - walk;
-});
+            carousel.addEventListener('mousemove', (e) => {
+              if (!isDragging) return;
+              const walk = e.pageX - startX;
+              carousel.scrollLeft = scrollStart - walk;
+            });
 
-// 6. Touch support (mobile)
-carousel.addEventListener('touchstart', (e) => {
-  isDragging = true;
-  startX = e.touches[0].pageX;
-  scrollStart = carousel.scrollLeft;
-}, { passive: true });
+            // 6. Touch support (mobile)
+            carousel.addEventListener('touchstart', (e) => {
+              isDragging = true;
+              startX = e.touches[0].pageX;
+              scrollStart = carousel.scrollLeft;
+            }, { passive: true });
 
-carousel.addEventListener('touchend', () => {
-  isDragging = false;
-});
+            carousel.addEventListener('touchend', () => {
+              isDragging = false;
+            });
 
-carousel.addEventListener('touchmove', (e) => {
-  if (!isDragging) return;
-  const walk = e.touches[0].pageX - startX;
-  carousel.scrollLeft = scrollStart - walk;
-}, { passive: false });
+            carousel.addEventListener('touchmove', (e) => {
+              if (!isDragging) return;
+              const walk = e.touches[0].pageX - startX;
+              carousel.scrollLeft = scrollStart - walk;
+            }, { passive: false });
 
          </script>
          <script>

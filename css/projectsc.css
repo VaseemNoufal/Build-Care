@@ -606,5 +606,165 @@ footer div.row.two div.item.medium.secondone ul li{
 footer div.row.two div.item.medium.secondone ul li a{
     color: #fff;
 }
-
+/* Responsive Section */
+@media (max-width: 1125px){
+    #home header nav ul{
+        display: none;
+    }
+    #home header div.right .barsimaeg{
+        display: inline-block;
+    }
+    #home header div.right::before{
+        display: block;
+    }
+    #home .spotlight .slider-ani .other::before{
+        left: 10%;
+    }
+}
+@media (max-width: 1014px){
+    #connectwithus div.content{
+        width: 70%;
+    }
+}
+@media all and (max-width: 995px){
+    footer div.row{
+        flex-direction: column;
+    }
+    footer div.row.one div.item{
+        width: 100%;
+    }
+    footer div.row.one div.item.second, footer div.row.one div.item.third{
+        width: 100%;
+        justify-content: flex-start;
+    }
+    footer div.row.one div.item.first, footer div.row.one div.item.second, footer div.row.one div.item.third{
+        margin-bottom: 15px;
+    }
+    footer div.row.one div.item.third ul li{
+        width: 28px;
+        height: 28px;
+    }
+    footer div.row.two{
+        flex-direction: column-reverse;
+    }
+    footer div.row div.item.medium.firstone{
+        width: 100%;
+    }
+    footer div.row div.item.medium.secondone{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    footer div.row.two div.item.medium.secondone ul{
+        justify-content: space-between;
+    }
+    footer div.row.two div.item.medium.firstone p{
+        max-width: 100%;
+    }
+}
+@media all and (max-width: 930px){
+    #connectwithus div.content h1{
+        font-size: 45px;
+    }
+    #connectwithus div.content div.bttn-container a.b{
+        font-size: 13px;
+    }
+}
+@media all and (max-width: 760px){
+    #home header{
+        height: 95px;
+    }
+}
+@media all and (max-width: 740px) {
+    #connectwithus div.content{
+        width: 90%;
+    }
+}
+@media all and (max-width: 670px){
+    #home header{
+        height: 90px;
+    }
+}
+@media all and (max-width: 630px){
+    #connectwithus{
+        padding: 80px 0;
+    }
+}
+@media all and (max-width: 605px){
+    #connectwithus div.content h1{
+        font-size: 43px;
+    }
+    #connectwithus div.content div.bttn-container a.b{
+        padding: 10px 18px;
+    }
+}
+@media all and (max-width: 541px){
+    #home header div.right img.globe{
+        display: none;
+    }
+    #home header div.right span.language{
+        display: none;
+    }
+    #home header img.chevron{
+        display: none;
+    }
+    #connectwithus div.content{
+        width: 100%;
+    }
+}
+@media all and (max-width: 436px){
+    #home header{
+        height: 85px;
+    }
+    #home header div.left h1.lefthe{
+        width: 190px;
+    }
+    #home header{
+        height: 75px;
+    }
+    #home header div.left h1.lefthe{
+        width: 170px;
+    }
+}
+@media all and (max-width: 440px){
+    footer div.row.one div.item.first h1{
+        width: 215px;
+    }
+    footer div.row.two div.item.medium.secondone ul li{
+        font-size: 15px;
+    }
+    footer div.row.two div.item.medium.firstone p{
+        font-size: 15px;
+    }
+}
+@media all and (max-width: 420px){
+    #connectwithus div.content div.bttn-container a.b{
+        padding: 8px 16px;
+        margin-right: 20px;
+    }
+    #connectwithus div.content h1{
+        font-size: 45px;
+    }
+}
+@media all and (max-width: 410px){
+    footer div.row.two div.item.medium.secondone ul{
+        flex-wrap: wrap;
+    }
+    footer div.row.two div.item.medium.secondone ul li{
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+}
+@media all and (max-width: 390px){
+    #connectwithus div.content div.bttn-container a.b{
+        margin-right: 10px;
+        padding: 7px 15px;
+    }
+}
+@media all and (max-width: 370px){
+    #connectwithus div.content div.bttn-container a.b{
+        padding: 6px 10px;
+        margin-right: 5px;
+    }
+}
 
