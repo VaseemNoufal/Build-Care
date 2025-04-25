@@ -299,17 +299,92 @@ h1{
 #home header div.right span.language{
     color: #fff;
 }
+/* DropDown Section */
 #home header .dropdownhead{
     position: fixed;
-    height: 95vh;
+    height: 97vh;
     width: 100%;
     background: #fff;
-    top: 3%;
-    left: 0;
-    right: 0;
+    top: 0;
     left: 100%;
-    /* display: none; */
+    right: 0;
+    background: linear-gradient(rgb(19, 114, 141), rgb(12, 74, 91));
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    transition: all .5s ease;
 }
+#home header > .dropdownhead > .right{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 45px;
+}
+#home header div.dropdownhead div.right .drop-languagedown{
+    position: fixed;
+    top: 19%;
+    height: 70px;
+    width: fit-content;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    right: 40%;
+    z-index: 1500;
+}
+#home header div.dropdownhead div.right .drop-languagedown span.languagetwo{
+    font-size: 28px;
+}
+#home header div.dropdownhead div.right .drop-languagedown span.languagetwo a{
+    color: #fff;
+}
+#home header div.dropdownhead div.right::before{
+    display: none;
+}
+#home header div.dropdownhead img.globedown{
+    display: inline-block;
+    width: 27px;
+    filter: invert(1);
+    margin-right: 5px;
+}
+#home header div.dropdownhead img.xmarkdown{
+    display: inline-block;
+    width: 35px;
+    filter: invert(1);
+    margin-bottom: 20px;
+}
+#home header div.dropdownhead span.languagedown{
+    color: #fff;
+    font-size: 30px;
+}
+#home header div.dropdownhead img.chevrondown{
+    display: inline-block;
+    width: 18px;
+    margin-left: 5px;
+    filter: invert(1);
+}
+#home header div.dropdownhead nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#home header div.dropdownhead nav ul li.nostyle{
+    margin-right: 30px;
+    font-size: 22px;
+    border-bottom: 4px solid transparent;
+    transition: all .3s ease;
+    font-family: 'barlowsemibold', Arial, Helvetica, sans-serif;
+    display: inline-block;
+    border-bottom: 2px solid white;
+}
+#home header div.dropdownhead nav ul li.nostyle img.chevronhlo{
+    display: inline-block;
+    width: 11px;
+    margin-left: 5px;
+    filter: invert(1);
+}
+/* Dropdown Section Ends */
 #home .spotlight{
     width: 100%;
     height: 100%;

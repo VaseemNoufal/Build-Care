@@ -9,7 +9,6 @@
 </head>
 <body>
   <section id="home">
-    </div>
       <header>
           <div class="left">
               <h1 class="lefthe">
@@ -48,14 +47,47 @@
               <img src="images/globe-solid.svg" alt="icon" class="globe">
               <span class="language special">English (India)</span>
               <img src="images/chevron-down-solid.svg" alt="icon" class="chevron" id="sub">
-              <img src="images/bars-solid.svg" alt="barsimaeg" class="barsimaeg">
+              <img src="images/bars-solid.svg" alt="barsimaeg" class="barsimaeg" id="uniwuee">
               <div class="drop-language" id="drop-lan-heaad">
                   <span class="language"><a href="#">Malayalam (India)</a></span>
               </div>
           </div>
-          <div class="dropdownhead">
-
+          <div class="dropdownhead" id="ninexx">
+            <img src="images/xmark-solid.svg" alt="Iocn of a X-mark" class="xmarkdown" id="uniwueex">
+            <div class="right" style="padding: 0;">
+              <img src="images/globe-solid.svg" alt="icon" class="globedown">
+              <span class="languagedown">English (India)</span>
+              <img src="images/chevron-down-solid.svg" alt="icon" class="chevrondown" id="subtwo">
+              <div class="drop-languagedown" id="drop-lan-heaadtwo">
+                  <span class="languagetwo"><a href="#">Malayalam (India)</a></span>
+              </div>
           </div>
+          <nav>
+            <ul>
+                <li style="padding: 0 0 5px 0; margin: 0 0 15px;" class="nostyle">
+                    <a href="#" style="color: #fff;">Home</a>
+                </li>
+                <li style="padding: 0 0 5px 0; margin: 0 0 15px;" class="nostyle">
+                    <a href="#" style="color: #fff;">Sectors</a>
+                    <img src="images/chevron-down-solid.svg" alt="icon" class="chevronhlo">
+                </li>
+                <li style="padding: 0 0 5px 0; margin: 0 0 15px;" class="nostyle">
+                    <a href="#" style="color: #fff;">About</a>
+                </li>
+                <li style="padding: 0 0 5px 0; margin: 0 0 15px;" class="nostyle">
+                    <a href="#" style="color: #fff;">Contact</a>
+                </li>
+                <li style="padding: 0 0 5px 0; margin: 0 0 15px;" class="nostyle">
+                    <a href="#" style="color: #fff;">Hire</a>
+                </li>
+                <li style="padding: 0 0 5px 0; margin: 0 0 15px;" class="nostyle">
+                    <a href="#" style="color: #fff;">Home</a>
+                </li>
+                <li style="padding: 0 0 5px 0; margin: 0 0 15px;" class="nostyle">
+                    <a href="#" style="color: #fff;">Home</a>
+                </li>
+            </ul>
+        </nav>
       </header>
       <section class="spotlight">
          <section class="navigation-area">
@@ -660,6 +692,29 @@ window.addEventListener("resize", applyResponsiveHeader);
         lauguagee.style.display = isOpen ? "flex" : "none";
         vidch.style.transform = isOpen ? "rotate(180deg)" : "rotate(0deg)";
       });
+    </script>
+    <script>
+      const vidchtwo = document.getElementById('subtwo');
+      const lauguageetwo = document.getElementById('drop-lan-heaadtwo');
+      let isOpentwo = false;
+    
+      vidchtwo.addEventListener("click", () => {
+        isOpentwo = !isOpentwo;
+    
+        lauguageetwo.style.display = isOpentwo ? "flex" : "none";
+        vidchtwo.style.transform = isOpentwo ? "rotate(180deg)" : "rotate(0deg)";
+      });
+    </script>
+    <script>
+      const mobile = document.getElementById('uniwuee');
+      const mobilex = document.getElementById('uniwueex')
+      const nine = document.getElementById('ninexx')
+      mobile.addEventListener("click", () => {
+        nine.style.left = "0";
+      })
+      mobilex.addEventListener("click", () => {
+        nine.style.left = "100%";
+      })
     </script>
     <!-- Counter + Animation -->
     <script>
