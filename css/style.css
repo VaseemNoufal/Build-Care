@@ -1375,10 +1375,10 @@ footer div.row div.item.small{
     width: 25%;
 }
 footer div.row div.item.medium.firstone{
-    width: 60%;
+    width: 55%;
 }
 footer div.row div.item.medium.secondone{
-    width: 40%;
+    width: 45%;
 }
 footer div.row.one div.item.first{
     display: flex;
@@ -1566,6 +1566,12 @@ footer div.row.two div.item.medium.secondone ul li a{
         height: 100%;
         object-fit: cover;
     }
+    footer div.row.two div.item.medium.secondone ul li{
+        font-size: 16px;
+    }
+    footer div.row.two div.item.medium.firstone p{
+        font-size: 16px;
+    }
 }
 @media all and (max-width:1073px){
     #home .spotlight .slider-ani.three .video {
@@ -1622,6 +1628,41 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #connectwithus div.content{
         width: 70%;
+    }
+}
+@media all and (max-width: 995px){
+    footer div.row{
+        flex-direction: column;
+    }
+    footer div.row.one div.item{
+        width: 100%;
+    }
+    footer div.row.one div.item.second, footer div.row.one div.item.third{
+        width: 100%;
+        justify-content: flex-start;
+    }
+    footer div.row.one div.item.first, footer div.row.one div.item.second, footer div.row.one div.item.third{
+        margin-bottom: 15px;
+    }
+    footer div.row.one div.item.third ul li{
+        width: 28px;
+        height: 28px;
+    }
+    footer div.row.two{
+        flex-direction: column-reverse;
+    }
+    footer div.row div.item.medium.firstone{
+        width: 100%;
+    }
+    footer div.row div.item.medium.secondone{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    footer div.row.two div.item.medium.secondone ul{
+        justify-content: space-between;
+    }
+    footer div.row.two div.item.medium.firstone p{
+        max-width: 100%;
     }
 }
 @media all and (max-width: 980px){
@@ -2221,6 +2262,15 @@ footer div.row.two div.item.medium.secondone ul li a{
     .whatsappp-section-div{
         width: 40%;
     }
+    footer div.row.one div.item.first h1{
+        width: 215px;
+    }
+    footer div.row.two div.item.medium.secondone ul li{
+        font-size: 15px;
+    }
+    footer div.row.two div.item.medium.firstone p{
+        font-size: 15px;
+    }
 }
 @media all and (max-width: 436px){
     #home .spotlight .slider-ani {
@@ -2329,6 +2379,16 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #meettheowner section.wrapper{
         width: 93%;
+    }
+}
+@media all and (max-width: 410px){
+    footer div.row.two div.item.medium.secondone ul{
+        flex-wrap: wrap;
+    }
+    footer div.row.two div.item.medium.secondone ul li{
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 7px;
     }
 }
 @media all and (max-width: 400px){

@@ -447,7 +447,7 @@
   </section>
 </section>
 <!-- <section class="overlay-content"></section> -->
- <footer>
+ <footer id="footer">
   <section class="wrapper">
     <div class="row one">
       <div class="item small first">
@@ -512,7 +512,7 @@
   </section>
  </footer>
  <!-- Overlay Icons Section -->
- <div class="whatsappp-section-div">
+ <div class="whatsappp-section-div" id="whatsappBtn">
   <a href="https://wa.me/919747212129" target="_blank">
     <span class="text">Whatsapp us</span>
     <img src="images/wp-ftr.webp" alt="whatsapp img" class="wp-ftrimg">
@@ -930,6 +930,21 @@ carousel.addEventListener('touchmove', (e) => {
           clientCarousel.addEventListener('mouseleave', startClientAutoplay);
         
           startClientAutoplay();
+        </script>
+        <script>
+          const whatsappBtn = document.getElementById("whatsappBtn");
+          const footer = document.getElementById("footer");
+        
+          window.addEventListener("scroll", () => {
+            const footerTop = footer.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+        
+            if (footerTop < windowHeight) {
+              whatsappBtn.style.display = "none";
+            } else {
+              whatsappBtn.style.display = "block";
+            }
+          });
         </script>
         
 </body>
