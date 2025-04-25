@@ -22,6 +22,26 @@ ol, ul {
 del {
 	text-decoration: line-through;
 }
+h1::selection{
+    background: #11809e;
+    color: #fff;
+}
+p::selection{
+    background: #11809e;
+    color: #fff;
+}
+a::selection{
+    background: #11809e;
+    color: #fff;
+}
+span::selection{
+    background: #11809e;
+    color: #fff;
+}
+li::selection{
+    background: #11809e;
+    color: #fff;
+}
 /* Fonts */
 @font-face {
     font-family: 'barlowblack';
@@ -1430,6 +1450,39 @@ h1{
     background: #2dd2ff;
     color: #fff;
 }
+/* Contact Us Styles Section */
+#contactusab{
+    padding: 20px 0;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+#contactusab section.top section.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#contactusab section.top section.wrapper div.left{
+    width: 50%;
+}
+#contactusab section.top section.wrapper div.right{
+    width: 46%;
+}
+#contactusab section.top section.wrapper div.right div.contactformcontainer form{
+    display: flex;
+    flex-direction: column;
+}
+#contactusab section.top section.wrapper div.right div.contactformcontainer form input{
+    background: rgba(0, 0, 0, 0.3);
+}
+.map-container {
+    width: 90%;
+    height: 420px;
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+  
 /* Footer Styles Section */
 footer{
     padding: 10px 0;
