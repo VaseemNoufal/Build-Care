@@ -607,6 +607,11 @@ footer div.row.two div.item.medium.secondone ul li a{
     color: #fff;
 }
 /* Responsive Section */
+@media all and (min-width: 1500px){
+    #home section.spotlight div.content{
+        padding-top: 241px;
+    }
+}
 @media (max-width: 1125px){
     #home header nav ul{
         display: none;
@@ -619,6 +624,15 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #home .spotlight .slider-ani .other::before{
         left: 10%;
+    }
+}
+@media all and (max-width: 1142px){
+    #home section.spotlight div.content h1{
+        font-size: 3.6em;
+        width: 80%;
+    }
+    #home section.spotlight div.content{
+        width: 80%;
     }
 }
 @media (max-width: 1014px){
@@ -660,6 +674,17 @@ footer div.row.two div.item.medium.secondone ul li a{
     footer div.row.two div.item.medium.firstone p{
         max-width: 100%;
     }
+    #contactusab section.top section.wrapper div.right div.contactformcontainer{
+        padding: 30px;
+    }
+}
+@media all and (max-width: 950px){
+    #home section.spotlight div.content h1{
+        font-size: 3.4em;
+    }
+    #home section.spotlight div.content{
+        padding-top: 225px;
+    }
 }
 @media all and (max-width: 930px){
     #connectwithus div.content h1{
@@ -667,6 +692,19 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #connectwithus div.content div.bttn-container a.b{
         font-size: 13px;
+    }
+}
+@media all and (max-width: 890px){
+    #home section.spotlight div.content h1{
+        font-size: 3.2em;
+    }
+    #home section.spotlight div.content{
+        width: 90%;
+    }
+}
+@media all and (max-width: 790px){
+    #galleryprojects ul.main-ul li.card{
+        width: 100%;
     }
 }
 @media all and (max-width: 760px){
@@ -679,9 +717,25 @@ footer div.row.two div.item.medium.secondone ul li a{
         width: 90%;
     }
 }
+@media all and (max-width: 718px){
+    #home section.spotlight div.content h1{
+        width: 100%;
+    }
+    #home section.spotlight div.content{
+        width: 100%;
+    }
+    #home section.spotlight div.content{
+        padding-top: 38vh;
+    }
+}
 @media all and (max-width: 670px){
     #home header{
         height: 90px;
+    }
+}
+@media all and (max-width: 645px){
+    #home section.spotlight div.content h1{
+        font-size: 3em;
     }
 }
 @media all and (max-width: 630px){
@@ -696,6 +750,14 @@ footer div.row.two div.item.medium.secondone ul li a{
     #connectwithus div.content div.bttn-container a.b{
         padding: 10px 18px;
     }
+    #home section.spotlight div.content h1{
+        font-size: 2.8em;
+    }
+}
+@media all and (max-width: 570px){
+    #home section.spotlight div.content h1{
+        font-size: 2.7em;
+    }
 }
 @media all and (max-width: 541px){
     #home header div.right img.globe{
@@ -709,6 +771,9 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #connectwithus div.content{
         width: 100%;
+    }
+    #home section.spotlight div.content h1{
+        font-size: 2.6em;
     }
 }
 @media all and (max-width: 436px){

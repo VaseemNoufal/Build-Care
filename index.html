@@ -488,13 +488,15 @@
       </div>
       <div class="right">
         <div class="contactformcontainer">
-          <form action="#">
+          <form name="submit-to-google-sheet">
             <h3>Get in Touch</h3>
-            <input type="text" name="Name" placeholder="Enter Your Name" required/>
-            <input type="email" name="Email" placeholder="Enter Your Email" required/>
-            <textarea name="Message" id="textarea" placeholder="Enter your Message" required></textarea>
+            <input type="text" name="name" placeholder="Enter Your Name" required/>
+            <input type="email" name="email" placeholder="Enter Your Email" />
+            <input type="number" name="number" placeholder="Enter Your Phone Number" required/>
+            <textarea name="message" id="textarea" placeholder="Enter your Message" required></textarea>
             <input type="submit" value="Submit"/>
           </form>
+          <span id="msg"></span>
         </div>
       </div>
     </section>
@@ -1039,6 +1041,46 @@ window.addEventListener("resize", applyResponsiveHeader);
             } else {
               whatsappBtn.style.display = "block";
             }
+          });
+        </script>
+        <!-- <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbywC6J3zoS9VFLwqMB28VW2pLu4Zg-gxITvdMPvDQBYqzCX2FVO7CnfbFRGF_CTdtF8/exec>'
+          const form = document.forms['submit-to-google-sheet']
+          const msg = document.getElementById("msg")
+        
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => {
+                msg.innerHTML = "Message Recieved Successfly"
+                setTimeout(function(){
+                  msg.innerHTML = "";
+                }, 5000)
+                form.reset()
+              })
+              .catch(error => console.error('Error!', error.message))
+          })
+        </script> -->
+        <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbywC6J3zoS9VFLwqMB28VW2pLu4Zg-gxITvdMPvDQBYqzCX2FVO7CnfbFRGF_CTdtF8/exec'; // No '>' at end
+          const form = document.forms['submit-to-google-sheet'];
+          const msg = document.getElementById("msg");
+        
+          form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { 
+              method: 'POST', 
+              mode: 'no-cors',  // Added this line
+              body: new FormData(form)
+            })
+            .then(response => {
+              msg.innerHTML = "Message Received Successfully"; // corrected typo 'Recieved'
+              setTimeout(function(){
+                msg.innerHTML = "";
+              }, 5000);
+              form.reset();
+            })
+            .catch(error => console.error('Error!', error.message));
           });
         </script>
         

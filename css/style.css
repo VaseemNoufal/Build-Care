@@ -1932,6 +1932,9 @@ footer div.row.two div.item.medium.secondone ul li a{
     #testimonila section.bottom ul.corouseel li.card .imggg{
         width: 65px;
     }
+    #contactusab section.top section.wrapper div.right div.contactformcontainer{
+        padding: 30px;
+    }
 }
 @media all and (max-width: 930px){
     #projects section.top .background-text h1{
@@ -1942,6 +1945,16 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #connectwithus div.content div.bttn-container a.b{
         font-size: 13px;
+    }
+    #contactusab section.top section.wrapper{
+        flex-wrap: wrap;
+    }
+    #contactusab section.top section.wrapper div.left{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #contactusab section.top section.wrapper div.right{
+        width: 100%;
     }
 }
 @media all and (max-width: 920px){
@@ -2088,15 +2101,10 @@ footer div.row.two div.item.medium.secondone ul li a{
     #whoweare section.wrapper div.left .backgrounud-text{
         top: 15px;
     }
-    #contactusab section.top section.wrapper{
-        flex-wrap: wrap;
-    }
-    #contactusab section.top section.wrapper div.left{
-        width: 100%;
-        margin-bottom: 30px;
-    }
-    #contactusab section.top section.wrapper div.right{
-        width: 100%;
+}
+@media all and (max-width: 780px){
+    #contactusab section.top section.wrapper div.right div.contactformcontainer{
+        width: 95%;
     }
 }
 @media all and (max-width: 770px){
@@ -2172,6 +2180,14 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #whatwedo::after{
         background-size: 40%;
+    }
+}
+@media all and (max-width: 680px){
+    #contactusab section.top section.wrapper div.right div.contactformcontainer{
+        width: 100%;
+    }
+    .map-container{
+        width: 95%;
     }
 }
 @media all and (max-width: 670px){
@@ -2414,6 +2430,9 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #testimonila section.bottom ul.corouseel{
         grid-auto-columns: calc((97%) - 1px);
+    }
+    #contactusab section.top section.wrapper div.right div.contactformcontainer{
+        padding: 25px;
     }
 }
 @media all and (max-width: 480px){
