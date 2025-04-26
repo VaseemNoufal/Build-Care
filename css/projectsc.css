@@ -606,6 +606,29 @@ footer div.row.two div.item.medium.secondone ul li{
 footer div.row.two div.item.medium.secondone ul li a{
     color: #fff;
 }
+/* Animation Styles */
+.hidden{
+    opacity: 0;
+    transition: all 2s;
+    transform: translateX(-50%);
+    filter: blur(10px);
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+.hiddentwo{
+    opacity: 0;
+    transition: all 2s;
+    transform: translateX(50%);
+    filter: blur(10px);
+}
+.showtwo{
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
 /* Responsive Section */
 @media all and (min-width: 1500px){
     #home section.spotlight div.content{
@@ -725,7 +748,7 @@ footer div.row.two div.item.medium.secondone ul li a{
         width: 100%;
     }
     #home section.spotlight div.content{
-        padding-top: 38vh;
+        padding-top: 31vh;
     }
 }
 @media all and (max-width: 670px){

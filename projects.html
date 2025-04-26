@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Build Care | Construction Company</title>
+    <link rel="shortcut icon" href="images/build care liiilll logo quality skibidi.png" type="image/x-icon">
     <link rel="stylesheet" href="css/projectsc.css">
 </head>
 <body>
@@ -90,15 +91,15 @@
         </header>
         <section class="spotlight">
             <div class="content">
-              <h1>Engineering dreams into <span style="color: #19aad2;">concrete reality</span></h1>
-              <span class="viweours">View our Projects</span>
+              <h1 class="hidden">Engineering dreams into <span style="color: #19aad2;">concrete reality</span></h1>
+              <span class="viweours hiddentwo">View our Projects</span>
             </div>
         </section>
     </section>
     <section id="galleryprojects">
         <section class="wrapper">
             <ul class="main-ul">
-                <li class="card">
+                <li class="card hidden">
                     <div class="top">
                         <img src="images/image.png" alt="Image of a site">
                     </div>
@@ -107,7 +108,7 @@
                         <p>We made This Remarkable Building under Certain conditions. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit asperiores ea facere nisi possimus soluta voluptatum,</p>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card hiddentwo">
                     <div class="top">
                         <img src="images/image.png" alt="Image of a site">
                     </div>
@@ -116,7 +117,7 @@
                         <p>We made This Remarkable Building under Certain conditions. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit asperiores ea facere nisi possimus soluta voluptatum,</p>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card hidden">
                     <div class="top">
                         <img src="images/image.png" alt="Image of a site">
                     </div>
@@ -125,7 +126,7 @@
                         <p>We made This Remarkable Building under Certain conditions. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit asperiores ea facere nisi possimus soluta voluptatum,</p>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card hiddentwo">
                     <div class="top">
                         <img src="images/image.png" alt="Image of a site">
                     </div>
@@ -140,11 +141,11 @@
     <section id="connectwithus">
         <section class="wrapper">
           <div class="content">
-            <h1>Ready to Work Together</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum, blanditiis exercitationem ipsam fugiat, neque, laborum veritatis obcaecati laudantium qui consequuntur.</p>
+            <h1 class="hidden">Ready to Work Together</h1>
+            <p class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum, blanditiis exercitationem ipsam fugiat, neque, laborum veritatis obcaecati laudantium qui consequuntur.</p>
             <div class="bttn-container">
-              <a href="#" class="startprojectwithus b">START A PROJECT WITH US</a>
-              <a href="#" class="contactus b">CONTACT US</a>
+              <a href="#" class="startprojectwithus b hidden">START A PROJECT WITH US</a>
+              <a href="#" class="contactus b hidden">CONTACT US</a>
             </div>
           </div>
         </section>
@@ -323,5 +324,33 @@
         vidchtwo.style.transform = isOpentwo ? "rotate(180deg)" : "rotate(0deg)";
       });
     </script>
+    <script>
+      const observer = new IntersectionObserver((entries) =>{
+        entries.forEach((entry) =>{
+          console.log(entry)
+          if (entry.isIntersecting){
+            entry.target.classList.add('show')
+          } else{
+            entry.target.classList.remove('show')
+          }
+        })
+      })
+      const hiddenElements = document.querySelectorAll('.hidden');
+      hiddenElements.forEach((el) => observer.observe(el));
+     </script>
+     <script>
+      const observertwo = new IntersectionObserver((entries) =>{
+        entries.forEach((entry) =>{
+          console.log(entry)
+          if (entry.isIntersecting){
+            entry.target.classList.add('showtwo')
+          } else{
+            entry.target.classList.remove('showtwo')
+          }
+        })
+      })
+      const hiddenElementstwo = document.querySelectorAll('.hiddentwo');
+      hiddenElementstwo.forEach((el) => observertwo.observe(el));
+     </script>
 </body>
 </html>
