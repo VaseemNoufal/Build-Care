@@ -2125,16 +2125,16 @@ footer div.row.two div.item.medium.secondone ul li a{
         display: block;
         background: #69deff;
         animation: cropani 1s;
-        left: 80px;
+        left: 100px;
     }
     @keyframes cropani{
         0%{
-            left: 80px;
+            left: 100px;
             width: 0%;
             opacity: 0.5;
         }
         100%{
-            left: 80px;
+            left: 100px;
             width: 80%;
             opacity: 1;
         }
@@ -2564,16 +2564,16 @@ footer div.row.two div.item.medium.secondone ul li a{
         display: block;
         background: #69deff;
         animation: cropani 1s;
-        left: 80px;
+        left: 100px;
     }
     @keyframes cropani{
         0%{
-            left: 80px;
+            left: 100px;
             width: 0%;
             opacity: 0.5;
         }
         100%{
-            left: 80px;
+            left: 100px;
             width: 70%;
             opacity: 1;
         }
