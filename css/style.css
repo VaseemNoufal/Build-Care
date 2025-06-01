@@ -1396,7 +1396,7 @@ h1{
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 #meettheowner section.bottom div.everything-container div.left{
-    padding: 70px;
+    padding: 55px;
     width: 55%;
 }
 #meettheowner section.bottom div.everything-container div.left h1{
@@ -1413,7 +1413,7 @@ h1{
     display: inline-block;
 }
 #meettheowner section.bottom div.everything-container div.left p{
-    font-size: 18px;
+    font-size: 17px;
     color: var(--grey-color);
 }
 #meettheowner section.bottom div.everything-container div.right{
@@ -1804,6 +1804,22 @@ footer div.row.two div.item.medium.secondone ul li a{
     #home .spotlight .slider-ani .class-dsimg{
         top: 0;
     }
+     #meettheowner section.bottom div.everything-container{
+        flex-direction: column-reverse;
+        height: 800px;
+    }
+    #meettheowner section.bottom div.everything-container div.left{
+        width: 100%;
+        height: 52%;
+        padding: 50px;
+    }
+    #meettheowner section.bottom div.everything-container div.right{
+        width: 100%;
+        height: 58%;
+    }
+    #meettheowner section.bottom div.everything-container div.right img{
+        border-radius: 10px;
+    }
 }
 @media (max-width: 1024px) {
     .spotlight {
@@ -1891,8 +1907,11 @@ footer div.row.two div.item.medium.secondone ul li a{
     #whatwedo section.bottom .slider-img{
         width: 95%;
     }
+    #meettheowner section.bottom{
+        padding-top: 40px;
+    }
     #meettheowner section.bottom div.everything-container div.right{
-        width: 49%;
+        width: 100%;
     }
 }
 @media all and (max-width: 970px){
@@ -2021,24 +2040,6 @@ footer div.row.two div.item.medium.secondone ul li a{
 
 }
 @media all and (max-width: 860px){
-    #meettheowner section.bottom div.everything-container{
-        flex-direction: column-reverse;
-        height: 800px;
-    }
-    #meettheowner section.bottom div.everything-container div.left{
-        width: 100%;
-        height: 42%;
-    }
-    #meettheowner section.bottom div.everything-container div.right{
-        width: 100%;
-        height: 58%;
-    }
-    #meettheowner section.bottom div.everything-container div.right img{
-        border-radius: 10px;
-    }
-    #meettheowner section.bottom div.everything-container div.left{
-        padding: 70px;
-    }
     #testimonila section.bottom ul.corouseel li.card .imggg{
         width: 60px;
     }
@@ -2105,6 +2106,13 @@ footer div.row.two div.item.medium.secondone ul li a{
 @media all and (max-width: 780px){
     #contactusab section.top section.wrapper div.right div.contactformcontainer{
         width: 95%;
+    }
+    #meettheowner section.bottom div.everything-container div.left{
+        height: 62%;
+        /* padding: 50px; */
+    }
+    #meettheowner section.bottom{
+        padding-top: 70px;
     }
 }
 @media all and (max-width: 770px){
@@ -2188,6 +2196,9 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     .map-container{
         width: 95%;
+    }
+     #meettheowner section.bottom{
+        padding-top: 115px;
     }
 }
 @media all and (max-width: 670px){
@@ -2331,6 +2342,9 @@ footer div.row.two div.item.medium.secondone ul li a{
     #whatwedo section.bottom .slider-img div.right h1{
         font-size: 45px;
     }
+    #meettheowner section.bottom div.everything-container div.left {
+        padding: 40px;
+    }
 }
 @media all and (max-width: 541px){
     #home header div.right img.globe{
@@ -2408,9 +2422,6 @@ footer div.row.two div.item.medium.secondone ul li a{
     #meettheowner section.bottom div.everything-container div.right{
         height: 53%;
     }
-    #meettheowner section.bottom div.everything-container div.left{
-        height: 47%;
-    }
     .whatsappp-section-div{
         width: 35%;
     }
@@ -2433,6 +2444,9 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #contactusab section.top section.wrapper div.right div.contactformcontainer{
         padding: 25px;
+    }
+    #meettheowner section.bottom {
+        padding-top: 95px;
     }
 }
 @media all and (max-width: 480px){
@@ -2496,7 +2510,7 @@ footer div.row.two div.item.medium.secondone ul li a{
         height: 47%;
     }
     #meettheowner section.bottom div.everything-container{
-        height: 700px;
+        height: 72%;
     }
     #meettheowner section.bottom div.everything-container div.left{
         height: 53%;
@@ -2583,6 +2597,12 @@ footer div.row.two div.item.medium.secondone ul li a{
     }
     #home header div.left h1.lefthe{
         width: 170px;
+    }
+}
+@media all and (max-width: 430px){
+    #meettheowner section.bottom {
+        padding-top: 0;
+        margin-top: 0;
     }
 }
 @media all and (max-width: 420px){
